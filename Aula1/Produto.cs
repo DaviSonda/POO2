@@ -29,15 +29,23 @@ namespace Aula1
         public string Descricao { get { return descricao; } set { descricao = value; } }
         public double Valor { get { return valor; } set { valor = value; } }
 
-        public double Reajuste(double valor)
+        public double Reajuste(OperacaoEnum operacao, double porcentagem)
         {
-            this.valor = valor;
+            switch (operacao)
+            {
+                case OperacaoEnum.Adicionar:
+                    valor += (porcentagem / 100 * valor);
+                    break;
+                case OperacaoEnum.Remover:
+                    valor -= (porcentagem / 100 * valor);
+                    break;
+            }
             return valor;
         }
 
-        public string ToString(string format, IFormatProvider formatProvider)
+        public override string ToString()
         {
-            return descricao;
+            return codigo + " , " + descricao + " , " + valor;
         }
     }
 }
