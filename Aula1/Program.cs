@@ -20,6 +20,8 @@ namespace Aula1
                 Descricao = entradaDados.LeString("Digite o nome do produto:"),
                 Valor = entradaDados.LeDouble("Digite o valor do produto:")
             };
+            var c = new Cadastro();
+            c.IncluiDados(p);
             Console.WriteLine("\nPré Reajuste: " + p.ToString());
             p.Reajuste(OperacaoEnum.Adicionar, 40);
             Console.WriteLine("\nPós Reajuste: " + p.ToString());
