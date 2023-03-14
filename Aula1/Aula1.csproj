@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Cadastro.cs" />
+    <Compile Include="Menu.cs" />
     <Compile Include="Utils\EntradaDados.cs" />
     <Compile Include="Enums\OperacaoEnum.cs" />
     <Compile Include="Produto.cs" />
