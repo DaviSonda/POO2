@@ -22,7 +22,7 @@ namespace Aula1
             Console.WriteLine("\n1 - Inserir dados");
             Console.WriteLine("\n2 - Escrever dados");
             Console.WriteLine("\n3 - Escrever média de valores");
-            Console.WriteLine("\n4 - ni");
+            Console.WriteLine("\n4 - Aumentar ");
             Console.WriteLine("\n5 - ni");
             Console.WriteLine("\n6 - ni");
             Console.WriteLine("\n0 - Sair");
