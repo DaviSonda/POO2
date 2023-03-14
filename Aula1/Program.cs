@@ -8,9 +8,6 @@ namespace Aula1
 {
     internal class Program
     {
-        Produto p;
-        EntradaDados entradaDados;
-
         public Program()
         {
             Menu m = new Menu();

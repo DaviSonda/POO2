@@ -21,6 +21,10 @@ namespace Aula1
         {
             Console.WriteLine("\n1 - Inserir dados");
             Console.WriteLine("\n2 - Escrever dados");
+            Console.WriteLine("\n3 - Escrever média de valores");
+            Console.WriteLine("\n4 - ni");
+            Console.WriteLine("\n5 - ni");
+            Console.WriteLine("\n6 - ni");
             Console.WriteLine("\n0 - Sair");
         }
 
@@ -45,6 +49,15 @@ namespace Aula1
                         break;
                     case 2:
                         EscreveDados();
+                        break;
+                    case 3:
+                        EscreveMedia();
+                        break;
+                    case 4:
+                        break;
+                    case 5:
+                        break;
+                    case 6:
                         break;
                     default:
                         Console.WriteLine("\nOpção Inválida");
@@ -73,6 +86,27 @@ namespace Aula1
                 Console.WriteLine("\n" + cad.GetProduto(i).ToString());
             }
 
+        }
+
+        public void EscreveMedia()
+        {
+            if(cad.Tamanho() <= 0)
+            {
+                Console.WriteLine("\nDeve existir valores para ser gerada uma média");
+                return;
+            }
+            Console.WriteLine("\nA média de valor dos produtos é: " + MediaValoresProdutos());
+        }
+
+        public double MediaValoresProdutos()
+        {
+            int tam = cad.Tamanho();
+            double total = 0;
+            for (int i = 0; i < tam; i++)
+            {
+                total += cad.GetProduto(i).Valor;
+            }
+            return total / tam;
         }
     }
 }
