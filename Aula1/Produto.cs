@@ -45,7 +45,7 @@ namespace Aula1
 
         public override string ToString()
         {
-            return codigo + " , " + descricao + " , " + valor;
+            return "\nCódigo: " + codigo + "\nDescricao: " + descricao + "\nValor: " + valor;
         }
     }
 }

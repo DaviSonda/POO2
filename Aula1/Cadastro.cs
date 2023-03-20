@@ -17,6 +17,23 @@ namespace Aula1
             produtos = new Produto[10];
         }
 
+        public void OrdenaProdutosAlfabeticamente()
+        {
+            Produto aux = null;
+            for (int i = 0; i < pos; i++)
+            {
+                for (int j = 0; j < pos - 1; j++)
+                {
+                    if (produtos[j].Descricao.CompareTo(produtos[j + 1].Descricao) > 0)
+                    {
+                        aux = produtos[j];
+                        produtos[j] = produtos[j + 1];
+                        produtos[j + 1] = aux;
+                    }
+                }
+            }
+        }
+
         public void InsereDados(int cod, string desc, double valor)
         {
             if (pos < TAM)

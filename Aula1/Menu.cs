@@ -11,6 +11,7 @@ namespace Aula1
         EntradaDados entrada;
         Produto p;
         Cadastro cad;
+        double media;
         public Menu()
         {
             entrada = new EntradaDados();
@@ -22,9 +23,9 @@ namespace Aula1
             Console.WriteLine("\n1 - Inserir dados");
             Console.WriteLine("\n2 - Escrever dados");
             Console.WriteLine("\n3 - Escrever média de valores");
-            Console.WriteLine("\n4 - Aumentar ");
-            Console.WriteLine("\n5 - ni");
-            Console.WriteLine("\n6 - ni");
+            Console.WriteLine("\n4 - Aumentar valores acima da média");
+            Console.WriteLine("\n5 - Ordenar pela descrição");
+            Console.WriteLine("\n6 - Listar produtos abaixo da média");
             Console.WriteLine("\n0 - Sair");
         }
 
@@ -54,10 +55,13 @@ namespace Aula1
                         EscreveMedia();
                         break;
                     case 4:
+                        IncrementaValoresAcimaDaMedia();
                         break;
                     case 5:
+                        cad.OrdenaProdutosAlfabeticamente();
                         break;
                     case 6:
+                        EscreveProdutosAbaixoDaMedia();
                         break;
                     default:
                         Console.WriteLine("\nOpção Inválida");
@@ -88,7 +92,7 @@ namespace Aula1
 
         }
 
-        public void EscreveMedia()
+        private void EscreveMedia()
         {
             if(cad.Tamanho() <= 0)
             {
@@ -98,7 +102,7 @@ namespace Aula1
             Console.WriteLine("\nA média de valor dos produtos é: " + MediaValoresProdutos());
         }
 
-        public double MediaValoresProdutos()
+        private double MediaValoresProdutos()
         {
             int tam = cad.Tamanho();
             double total = 0;
@@ -106,7 +110,36 @@ namespace Aula1
             {
                 total += cad.GetProduto(i).Valor;
             }
-            return total / tam;
+            media = total / tam;
+            return media;
+        }
+
+        private void IncrementaValoresAcimaDaMedia()
+        {
+            MediaValoresProdutos();
+            double porcentagem = entrada.LeDouble("Digite a porcentagem para reajuste: ");
+            for (int i = 0; i < cad.Tamanho(); i++)
+            {
+                Produto p = cad.GetProduto(i);
+                if(p.Valor >= media)
+                {
+                    p.Reajuste(OperacaoEnum.Adicionar, porcentagem);
+                }
+            }
+        }
+
+        private void EscreveProdutosAbaixoDaMedia()
+        {
+            MediaValoresProdutos();
+            for (int i = 0; i < cad.Tamanho(); i++)
+            {
+                Produto p = cad.GetProduto(i);
+                if (p.Valor < media)
+                {
+                    Console.WriteLine("\n" + p.ToString());
+                }
+            }
+
         }
     }
 }
