@@ -89,7 +89,7 @@ namespace Aula1
                         DeletarProdutoPedido();
                         break;
                     case 12:
-                        ImprimePedido();
+                        AlteraQuantidadeProdutoPedido();
                         break;
                     case 13:
                         ValorTotalPedido();
@@ -105,7 +105,7 @@ namespace Aula1
 
         private void AlteraQuantidadeProdutoPedido()
         {
-            pedido.RemoverProduto(entrada.LeInteiro("Digite o código do produto a ser retirado do pedido"));
+            pedido.AlterarQuantidadeProduto(entrada.LeInteiro("Digite o código do produto a ser alterado no pedido"));
         }
 
         private void ValorTotalPedido()
