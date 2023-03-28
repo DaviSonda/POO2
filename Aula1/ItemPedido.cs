@@ -36,7 +36,7 @@ namespace Aula1
 
         public override string ToString()
         {
-            return "\nProduto: " + produto.ToString() + "\nQuantidade: " + quantidade;
+            return "\nProduto: " + produto.ToString() + "\n\nQuantidade: " + quantidade;
         }
 
         public double ValorTotal()

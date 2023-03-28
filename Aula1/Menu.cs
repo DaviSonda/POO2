@@ -12,10 +12,13 @@ namespace Aula1
         Produto p;
         Cadastro cad;
         double media;
+        Pedido pedido;
+        ItemPedido itemPedido;
         public Menu()
         {
             entrada = new EntradaDados();
             cad = new Cadastro();
+            pedido = new Pedido();
         }
 
         private void Opcoes()
@@ -26,6 +29,13 @@ namespace Aula1
             Console.WriteLine("\n4 - Aumentar valores acima da média");
             Console.WriteLine("\n5 - Ordenar pela descrição");
             Console.WriteLine("\n6 - Listar produtos abaixo da média");
+            Console.WriteLine("\n7 - Excluir produto");
+            Console.WriteLine("\n8 - Editar produto");
+            Console.WriteLine("\n9 - Insere item no pedido");
+            Console.WriteLine("\n10 - Lista pedido");
+            Console.WriteLine("\n11 - Deletar produto do pedido");
+            Console.WriteLine("\n12 - Alterar quantidade de produto no pedido");
+            Console.WriteLine("\n13 - Listar valor total do pedido");
             Console.WriteLine("\n0 - Sair");
         }
 
@@ -63,6 +73,27 @@ namespace Aula1
                     case 6:
                         EscreveProdutosAbaixoDaMedia();
                         break;
+                    case 7:
+                        ExcluiProduto();
+                        break;
+                    case 8:
+                        EditarProduto();
+                        break;
+                    case 9:
+                        LeItemPedido();
+                        break;
+                    case 10:
+                        ImprimePedido();
+                        break;
+                    case 11:
+                        DeletarProdutoPedido();
+                        break;
+                    case 12:
+                        ImprimePedido();
+                        break;
+                    case 13:
+                        ValorTotalPedido();
+                        break;
                     default:
                         Console.WriteLine("\nOpção Inválida");
                         break;
@@ -70,6 +101,29 @@ namespace Aula1
                 opc = MostraOpcoes();
             }
 
+        }
+
+        private void AlteraQuantidadeProdutoPedido()
+        {
+            pedido.RemoverProduto(entrada.LeInteiro("Digite o código do produto a ser retirado do pedido"));
+        }
+
+        private void ValorTotalPedido()
+        {
+            pedido.InformaValorTotal();
+        }
+        
+        private void DeletarProdutoPedido()
+        {
+            pedido.RemoverProduto(entrada.LeInteiro("Digite o código do produto a ser retirado do pedido"));
+        }
+        private void EditarProduto()
+        {
+            cad.EditarProduto(entrada.LeInteiro("Digite o código do produto a ser editado"));
+        }
+        private void ExcluiProduto()
+        {
+            cad.ExcluiProduto(entrada.LeInteiro("Digite o código do produto a ser excluído"));
         }
 
         private void LeProduto()
@@ -140,6 +194,31 @@ namespace Aula1
                 }
             }
 
+        }
+
+        private void LeItemPedido()
+        {
+            int codigo = entrada.LeInteiro("Informe o código do produto:");
+            Produto p = cad.GetProdutoByCodigo(codigo);
+            int qtde = 0;
+
+            if (p == null)
+            {
+                Console.WriteLine("\nCódigo não encontrado no cadastro de produtos");
+            }
+            else
+            {
+                qtde = entrada.LeInteiro("Informe a quantidade itens:");
+                itemPedido = new ItemPedido(p, qtde);
+                pedido.InsereItem(itemPedido);
+            }
+        }
+        private void ImprimePedido()
+        {
+            for (int i = 0; i < pedido.Tamanho(); i++)
+            {
+                Console.WriteLine(pedido.GetItemPedido(i).ToString());
+            }
         }
     }
 }

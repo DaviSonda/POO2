@@ -8,6 +8,7 @@ namespace Aula1
 {
     public class Cadastro
     {
+        EntradaDados entrada;
         private Produto[] produtos;
         private int pos = 0;
         private const int TAM = 5;
@@ -15,6 +16,11 @@ namespace Aula1
         public Cadastro()
         {
             produtos = new Produto[10];
+            entrada = new EntradaDados();
+            //Mock
+            InsereDados(new Produto(1, "prod1", 5));
+            InsereDados(new Produto(2, "prod2", 5));
+            //Mock
         }
 
         public void OrdenaProdutosAlfabeticamente()
@@ -62,6 +68,70 @@ namespace Aula1
                 p = produtos[posicao];
             }
             return p;
+        }
+
+        public Produto GetProdutoByCodigo(int codigo)
+        {
+            for (int i = 0; i < pos; i++)
+            {
+                if (produtos[i].Codigo == codigo) return produtos[i];
+            }
+            NotFound();
+            return null;
+        }
+
+        public void ExcluiProduto(int codigo)
+        {
+            bool matched = false;
+            for (int i = 0; i < pos; i++)
+            {
+                if (produtos[i].Codigo == codigo)
+                {
+                    //Transforma pedidos em lista
+                    var prod = produtos.ToList();
+                    //Remove produto da lista
+                    prod.Remove(GetProduto(i));
+                    //Transforma novamente em array
+                    produtos = prod.ToArray();
+                    //Diminui o tamanho do array
+                    pos--;
+                    //Marca o produto como excluído
+                    matched = true;
+                    //Avisa o produto que foi excluído e encerra o loop
+                    Console.WriteLine("\nProduto de código: " + codigo + " deletado com sucesso");
+                    break;
+                }
+            }
+            if (!matched)
+            {
+                NotFound();
+            }
+        }
+
+        public void EditarProduto(int codigo)
+        {
+            bool matched = false;
+            for (int i = 0; i < pos; i++)
+            {
+                if (produtos[i].Codigo == codigo)
+                {
+                    produtos[i].Descricao = entrada.LeString("Digite a nova descrição do produto:");
+                    produtos[i].Valor = entrada.LeDouble("Digite o novo valor do produto:");
+                    Console.WriteLine("\nProduto de código: " + codigo + " atualizado com sucesso");
+                    matched = true;
+                    break;
+                }
+            }
+
+            if (!matched)
+            {
+                NotFound();
+            }
+        }
+
+        public void NotFound()
+        {
+            Console.WriteLine("\nNão foi encontrado nenhum produto com esse código");
         }
     }
 }
