@@ -11,7 +11,14 @@ namespace Aula1
         private int dataFabricacao;
         private int dataValidade;
 
-        public ProdutoAlimentar(int dataFabricacao, int dataValidade)
+        public ProdutoAlimentar() : base()
+        {
+            dataFabricacao = 0;
+            dataValidade = 0;
+        }
+
+        public ProdutoAlimentar(int dataFabricacao, int dataValidade) : base()
+       
         {
             this.dataFabricacao = dataFabricacao;
             this.dataValidade = dataValidade;

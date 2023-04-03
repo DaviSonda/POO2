@@ -11,7 +11,13 @@ namespace Aula1
         private int tamanhoArquivo;
         private int versaoProduto;
 
-        public ProdutoDigital(int tamanhoArquivo, int versaoProduto)
+        public ProdutoDigital() : base()
+        {
+            tamanhoArquivo = 0;
+            versaoProduto = 0;
+        }
+
+        public ProdutoDigital(int tamanhoArquivo, int versaoProduto) : base()
         {
             this.tamanhoArquivo = tamanhoArquivo;
             this.versaoProduto = versaoProduto;

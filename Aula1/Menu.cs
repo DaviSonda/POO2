@@ -9,7 +9,8 @@ namespace Aula1
     public class Menu
     {
         EntradaDados entrada;
-        Produto p;
+        ProdutoDigital pd;
+        ProdutoAlimentar pa;
         Cadastro cad;
         double media;
         Pedido pedido;
@@ -23,19 +24,20 @@ namespace Aula1
 
         private void Opcoes()
         {
-            Console.WriteLine("\n1 - Inserir dados");
-            Console.WriteLine("\n2 - Escrever dados");
-            Console.WriteLine("\n3 - Escrever média de valores");
-            Console.WriteLine("\n4 - Aumentar valores acima da média");
-            Console.WriteLine("\n5 - Ordenar pela descrição");
-            Console.WriteLine("\n6 - Listar produtos abaixo da média");
-            Console.WriteLine("\n7 - Excluir produto");
-            Console.WriteLine("\n8 - Editar produto");
-            Console.WriteLine("\n9 - Insere item no pedido");
-            Console.WriteLine("\n10 - Lista pedido");
-            Console.WriteLine("\n11 - Deletar produto do pedido");
-            Console.WriteLine("\n12 - Alterar quantidade de produto no pedido");
-            Console.WriteLine("\n13 - Listar valor total do pedido");
+            Console.WriteLine("\n1 - Inserir produto digital");
+            Console.WriteLine("\n2 - Inserir produto alimentar");
+            Console.WriteLine("\n3 - Escrever dados");
+            Console.WriteLine("\n4 - Escrever média de valores");
+            Console.WriteLine("\n5 - Aumentar valores acima da média");
+            Console.WriteLine("\n6 - Ordenar pela descrição");
+            Console.WriteLine("\n7 - Listar produtos abaixo da média");
+            Console.WriteLine("\n8 - Excluir produto");
+            Console.WriteLine("\n9 - Editar produto");
+            Console.WriteLine("\n10 - Insere item no pedido");
+            Console.WriteLine("\n11 - Lista pedido");
+            Console.WriteLine("\n12 - Deletar produto do pedido");
+            Console.WriteLine("\n13 - Alterar quantidade de produto no pedido");
+            Console.WriteLine("\n14 - Listar valor total do pedido");
             Console.WriteLine("\n0 - Sair");
         }
 
@@ -56,42 +58,45 @@ namespace Aula1
                     case 0:
                         break;
                     case 1:
-                        LeProduto();
+                        LeProdutoDigital();
                         break;
                     case 2:
-                        EscreveDados();
+                        LeProdutoAlimentar();
                         break;
                     case 3:
-                        EscreveMedia();
+                        EscreveDados();
                         break;
                     case 4:
-                        IncrementaValoresAcimaDaMedia();
+                        EscreveMedia();
                         break;
                     case 5:
-                        cad.OrdenaProdutosAlfabeticamente();
+                        IncrementaValoresAcimaDaMedia();
                         break;
                     case 6:
-                        EscreveProdutosAbaixoDaMedia();
+                        cad.OrdenaProdutosAlfabeticamente();
                         break;
                     case 7:
-                        ExcluiProduto();
+                        EscreveProdutosAbaixoDaMedia();
                         break;
                     case 8:
-                        EditarProduto();
+                        ExcluiProduto();
                         break;
                     case 9:
-                        LeItemPedido();
+                        EditarProduto();
                         break;
                     case 10:
-                        ImprimePedido();
+                        LeItemPedido();
                         break;
                     case 11:
-                        DeletarProdutoPedido();
+                        ImprimePedido();
                         break;
                     case 12:
-                        AlteraQuantidadeProdutoPedido();
+                        DeletarProdutoPedido();
                         break;
                     case 13:
+                        AlteraQuantidadeProdutoPedido();
+                        break;
+                    case 14:
                         ValorTotalPedido();
                         break;
                     default:
@@ -126,15 +131,32 @@ namespace Aula1
             cad.ExcluiProduto(entrada.LeInteiro("Digite o código do produto a ser excluído"));
         }
 
-        private void LeProduto()
+        private void LeProdutoDigital()
         {
-            p = new Produto
+            pd = new ProdutoDigital
             {
+                TamanhoArquivo = entrada.LeInteiro("Digite o tamanho do arquivo"),
+                VersaoProduto = entrada.LeInteiro("Digite a versão do produto"),
                 Codigo = entrada.LeInteiro("Digite o código do produto:"),
                 Descricao = entrada.LeString("Digite o nome do produto:"),
-                Valor = entrada.LeDouble("Digite o valor do produto:")
+                Valor = entrada.LeDouble("Digite o valor do produto:"),
+
             };
-            cad.InsereDados(p);
+            cad.InsereDados(pd);
+        }
+
+        private void LeProdutoAlimentar()
+        {
+            pa = new ProdutoAlimentar
+            {
+                DataFabricacao = entrada.LeInteiro("Digite o tamanho do arquivo"),
+                DataValidade = entrada.LeInteiro("Digite o tamanho do arquivo"),
+                Codigo = entrada.LeInteiro("Digite o código do produto:"),
+                Descricao = entrada.LeString("Digite o nome do produto:"),
+                Valor = entrada.LeDouble("Digite o valor do produto:"),
+
+            };
+            cad.InsereDados(pd);
         }
 
         private void EscreveDados()
