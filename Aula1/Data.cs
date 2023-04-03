@@ -29,7 +29,7 @@ namespace Aula1
             DateTime d;
 
             bool chValidity = DateTime.TryParseExact(
-         dia + "/" + mes + "/" + ano,
+         data.ToString(),
          "dd/MM/yyyy",
          CultureInfo.InvariantCulture,
          DateTimeStyles.None,
@@ -39,7 +39,20 @@ namespace Aula1
 
         public override string ToString()
         {
-            return dia + "/" + mes + "/" + ano;
+            String d;
+            String m;
+            if (dia < 10)
+            {
+                d = "0" + dia;
+            }
+            else d = dia.ToString();
+            if (mes < 10)
+            {
+                m = "0" + mes;
+            }
+            else m = mes.ToString();
+            return d + "/" + m + "/" + ano;
         }
+
     }
 }

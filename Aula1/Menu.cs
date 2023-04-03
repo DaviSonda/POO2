@@ -38,6 +38,7 @@ namespace Aula1
             Console.WriteLine("\n12 - Deletar produto do pedido");
             Console.WriteLine("\n13 - Alterar quantidade de produto no pedido");
             Console.WriteLine("\n14 - Listar valor total do pedido");
+            Console.WriteLine("\n15 - Inserir data e validar");
             Console.WriteLine("\n0 - Sair");
         }
 
@@ -99,6 +100,9 @@ namespace Aula1
                     case 14:
                         ValorTotalPedido();
                         break;
+                    case 15:
+                        ArmazenaValidaData();
+                        break;
                     default:
                         Console.WriteLine("\nOpção Inválida");
                         break;
@@ -106,6 +110,25 @@ namespace Aula1
                 opc = MostraOpcoes();
             }
 
+        }
+
+        private void ArmazenaValidaData()
+        {
+
+            Data d = new Data(entrada.LeInteiro("Digite o dia"),
+                entrada.LeInteiro("Digite o mês"),
+                entrada.LeInteiro("Digite o ano")
+            );
+            Console.WriteLine(d.ToString());
+            Boolean b = d.DataValida(d);
+            if (b)
+            {
+                Console.WriteLine("\nData válida");
+            }
+            else
+            {
+                Console.WriteLine("\nData inválida");
+            }
         }
 
         private void AlteraQuantidadeProdutoPedido()
@@ -117,7 +140,7 @@ namespace Aula1
         {
             pedido.InformaValorTotal();
         }
-        
+
         private void DeletarProdutoPedido()
         {
             pedido.RemoverProduto(entrada.LeInteiro("Digite o código do produto a ser retirado do pedido"));
@@ -170,7 +193,7 @@ namespace Aula1
 
         private void EscreveMedia()
         {
-            if(cad.Tamanho() <= 0)
+            if (cad.Tamanho() <= 0)
             {
                 Console.WriteLine("\nDeve existir valores para ser gerada uma média");
                 return;
@@ -197,7 +220,7 @@ namespace Aula1
             for (int i = 0; i < cad.Tamanho(); i++)
             {
                 Produto p = cad.GetProduto(i);
-                if(p.Valor >= media)
+                if (p.Valor >= media)
                 {
                     p.Reajuste(OperacaoEnum.Adicionar, porcentagem);
                 }
