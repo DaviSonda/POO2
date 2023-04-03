@@ -30,7 +30,8 @@ namespace Aula1
 
         public override string ToString()
         {
-            return "\nData de fabricação: " + dataFabricacao + "\nData de validade: " + dataValidade;
+
+            return "\nCódigo: " + Codigo + "\nDescricao: " + Descricao + "\nValor: " + Valor + "\nData de fabricação: " + dataFabricacao + "\nData de validade: " + dataValidade;
         }
     }
 }
