@@ -8,30 +8,34 @@ namespace Aula1
 {
     public class ProdutoAlimentar : Produto
     {
-        private int dataFabricacao;
-        private int dataValidade;
+        private Data dataFabricacao;
+        private Data dataValidade;
 
         public ProdutoAlimentar() : base()
         {
-            dataFabricacao = 0;
-            dataValidade = 0;
+            DateTime madeDate = DateTime.Now;
+            //Data de validate padrão é 30 dias
+            DateTime expireDate = madeDate.AddDays(30);
+            dataFabricacao = new Data(madeDate.Day, madeDate.Month, madeDate.Year);
+            dataValidade = new Data(expireDate.Day, expireDate.Month, expireDate.Year);
         }
 
-        public ProdutoAlimentar(int dataFabricacao, int dataValidade) : base()
-       
+        public ProdutoAlimentar(Data dataFabricacao, Data dataValidade) : base()
         {
+            Console.WriteLine("\nfabric: " + dataFabricacao.ToString());
+            Console.WriteLine("\nvalidad: " + dataValidade.ToString());
             this.dataFabricacao = dataFabricacao;
             this.dataValidade = dataValidade;
         }
 
-        public int DataFabricacao { get { return dataFabricacao; } set { dataFabricacao = value; } }
+        public Data DataFabricacao { get { return dataFabricacao; } set { dataFabricacao = value; } }
 
-        public int DataValidade { get { return dataValidade; } set { dataFabricacao = value; } }
+        public Data DataValidade { get { return dataValidade; } set { dataValidade = value; } }
 
         public override string ToString()
         {
-
-            return "\nCódigo: " + Codigo + "\nDescricao: " + Descricao + "\nValor: " + Valor + "\nData de fabricação: " + dataFabricacao + "\nData de validade: " + dataValidade;
+            string x = base.ToString();
+            return x + "\nData de fabricação: " + DataFabricacao.ToString() + "\nData de validade: " + DataValidade.ToString();
         }
     }
 }

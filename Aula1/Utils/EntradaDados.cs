@@ -8,6 +8,7 @@ namespace Aula1
 {
     public class EntradaDados
     {
+        private Data data = new Data();
         public EntradaDados() { }
 
         public int LeInteiro(string msg)
@@ -49,6 +50,25 @@ namespace Aula1
             {
                 Console.WriteLine("\nVocê deve digitar uma string válida\n");
                 return this.LeString(msg);
+            }
+        }
+
+        public Data LeData(string msg)
+        {
+            Console.WriteLine("\n" + msg);
+            int day = LeInteiro("Digite o dia:");
+            int month = LeInteiro("Digite o mês:");
+            int year = LeInteiro("Digite o ano:");
+            Data d = new Data(day, month, year);
+            Boolean b = d.DataValida(d);
+            if (b)
+            {
+                return d;
+            }
+            else
+            {
+                Console.WriteLine("\nVocê deve digitar uma data válida\n");
+                return this.LeData(msg);
             }
         }
     }

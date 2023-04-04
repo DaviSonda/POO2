@@ -1,7 +1,9 @@
-﻿using System;
+﻿using Aula1.Enums;
+using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -17,6 +19,7 @@ namespace Aula1
         public int Mes { get { return mes; } set { mes = value; } }
         public int Ano { get { return ano; } set { ano = value; } }
 
+        public Data() { }
         public Data(int dia, int mes, int ano)
         {
             Dia = dia;
@@ -52,6 +55,25 @@ namespace Aula1
             }
             else m = mes.ToString();
             return d + "/" + m + "/" + ano;
+        }
+
+        public ValidadeEnum ValidadeData(Data data)
+        {
+            DateTime today = DateTime.Now;
+            DateTime formattedData = DateTime.ParseExact(data.ToString(), "dd/MM/yyyy", CultureInfo.CurrentCulture);
+            int diffDays = today.CompareTo(formattedData);
+            if (diffDays > 0)
+            {
+                return ValidadeEnum.Vencido;
+            }
+            else if (diffDays > -4)
+            {
+                return ValidadeEnum.VenceEmBreve;
+            }
+            else
+            {
+                return ValidadeEnum.Ok;
+            }
         }
 
     }

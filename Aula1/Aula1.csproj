@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Cadastro.cs" />
     <Compile Include="Data.cs" />
+    <Compile Include="Enums\ValidadeEnum.cs" />
     <Compile Include="ItemPedido.cs" />
     <Compile Include="Menu.cs" />
     <Compile Include="Pedido.cs" />

@@ -29,7 +29,8 @@ namespace Aula1
 
         public override string ToString()
         {
-            return "\nCódigo: " + Codigo + "\nDescricao: " + Descricao + "\nValor: " + Valor + "\nTamanho do arquivo: " + tamanhoArquivo + "\nVersão do Produto: " + versaoProduto;
+            string x = base.ToString();
+            return x + "\nTamanho do arquivo: " + tamanhoArquivo + "\nVersão do Produto: " + versaoProduto;
             
         }
     }

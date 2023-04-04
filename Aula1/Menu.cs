@@ -9,8 +9,6 @@ namespace Aula1
     public class Menu
     {
         EntradaDados entrada;
-        ProdutoDigital pd;
-        ProdutoAlimentar pa;
         Cadastro cad;
         double media;
         Pedido pedido;
@@ -119,15 +117,14 @@ namespace Aula1
                 entrada.LeInteiro("Digite o mês"),
                 entrada.LeInteiro("Digite o ano")
             );
-            Console.WriteLine(d.ToString());
             Boolean b = d.DataValida(d);
             if (b)
             {
-                Console.WriteLine("\nData válida");
+                Console.WriteLine("\n" + d + "é uma data válida");
             }
             else
             {
-                Console.WriteLine("\nData inválida");
+                Console.WriteLine("\n" + d + "é uma data inválida");
             }
         }
 
@@ -156,10 +153,10 @@ namespace Aula1
 
         private void LeProdutoDigital()
         {
-            pd = new ProdutoDigital
+            ProdutoDigital pd = new ProdutoDigital
             {
-                TamanhoArquivo = entrada.LeInteiro("Digite o tamanho do arquivo"),
-                VersaoProduto = entrada.LeInteiro("Digite a versão do produto"),
+                TamanhoArquivo = entrada.LeInteiro("Digite o tamanho do arquivo:"),
+                VersaoProduto = entrada.LeInteiro("Digite a versão do produto:"),
                 Codigo = entrada.LeInteiro("Digite o código do produto:"),
                 Descricao = entrada.LeString("Digite o nome do produto:"),
                 Valor = entrada.LeDouble("Digite o valor do produto:"),
@@ -170,16 +167,16 @@ namespace Aula1
 
         private void LeProdutoAlimentar()
         {
-            pa = new ProdutoAlimentar
+            ProdutoAlimentar pa = new ProdutoAlimentar
             {
-                DataFabricacao = entrada.LeInteiro("Digite o tamanho do arquivo"),
-                DataValidade = entrada.LeInteiro("Digite o tamanho do arquivo"),
+                DataFabricacao = entrada.LeData("Digite a data de fabricação do produto:"),
+                DataValidade = entrada.LeData("Digite a data de validade do produto:"),
                 Codigo = entrada.LeInteiro("Digite o código do produto:"),
                 Descricao = entrada.LeString("Digite o nome do produto:"),
                 Valor = entrada.LeDouble("Digite o valor do produto:"),
 
             };
-            cad.InsereDados(pd);
+            cad.InsereDados(pa);
         }
 
         private void EscreveDados()
@@ -254,8 +251,14 @@ namespace Aula1
             else
             {
                 qtde = entrada.LeInteiro("Informe a quantidade itens:");
-                itemPedido = new ItemPedido(p, qtde);
-                pedido.InsereItem(itemPedido);
+                try
+                {
+                    itemPedido = new ItemPedido(p, qtde);
+                    pedido.InsereItem(itemPedido);
+                } catch (Exception ex) {
+                    Console.WriteLine("\n" + ex.Message);
+                }
+               
             }
         }
         private void ImprimePedido()

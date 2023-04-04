@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Aula1.Enums;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,13 +11,21 @@ namespace Aula1
     {
         private Produto produto;
         private int quantidade;
-        public ItemPedido() {
+        private Data data = new Data();
+        public ItemPedido()
+        {
             this.produto = new Produto();
             this.quantidade = 0;
         }
 
         public ItemPedido(Produto produto, int quantidade)
         {
+            if (produto.GetType() == typeof(ProdutoAlimentar))
+            {
+                ProdutoAlimentar pa = produto as ProdutoAlimentar;
+                ValidadeEnum validade = data.ValidadeData(pa.DataValidade);
+                produto = VerificarValidade(validade, pa);
+            }
             this.produto = produto;
             this.quantidade = quantidade;
         }
@@ -42,6 +51,23 @@ namespace Aula1
         public double ValorTotal()
         {
             return produto.Valor * quantidade;
+        }
+
+        private ProdutoAlimentar VerificarValidade(ValidadeEnum val, ProdutoAlimentar prod)
+        {
+            switch (val)
+            {
+                case ValidadeEnum.Vencido:
+                    throw new Exception("\nVocê não pode adicionar um produto fora de validade ao pedido");
+                case ValidadeEnum.VenceEmBreve:
+                    Console.WriteLine("\nProduto adicionado com 30% de desconto por estar perto do prazo de validade");
+                    prod.Valor = prod.Reajuste(OperacaoEnum.Remover, 30);
+                    return prod;
+                case ValidadeEnum.Ok:
+                    return prod;
+                default:
+                    return prod;
+            }
         }
     }
 }
