@@ -1,0 +1,8 @@
+D:\GitHub\POO2\IMC\Colecoes\obj\Debug\Imc.csproj.AssemblyReference.cache
+D:\GitHub\POO2\IMC\Colecoes\obj\Debug\Imc.csproj.SuggestedBindingRedirects.cache
+D:\GitHub\POO2\IMC\Colecoes\obj\Debug\Imc.csproj.CoreCompileInputs.cache
+D:\GitHub\POO2\IMC\Colecoes\obj\Debug\Colecoes.exe
+D:\GitHub\POO2\IMC\Colecoes\obj\Debug\Colecoes.pdb
+D:\GitHub\POO2\IMC\Colecoes\bin\Debug\Colecoes.exe.config
+D:\GitHub\POO2\IMC\Colecoes\bin\Debug\Colecoes.exe
+D:\GitHub\POO2\IMC\Colecoes\bin\Debug\Colecoes.pdb

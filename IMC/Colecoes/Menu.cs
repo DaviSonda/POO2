@@ -1,18 +1,20 @@
-﻿using Aula1;
+﻿using Imc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Aula1
+namespace Imc
 {
     public class Menu
     {
         EntradaDados entrada;
+        Cadastro cad;
         public Menu()
         {
             entrada = new EntradaDados();
+            cad = new Cadastro();
         }
 
         private void Opcoes()
@@ -64,20 +66,22 @@ namespace Aula1
 
         private void InsereAtleta()
         {
-
+            cad.InsereAtleta(new Atleta(entrada.LeString("Nome do atleta"), entrada.LeDouble("Peso do atleta"), entrada.LeDouble("Altura do atleta"), entrada.LeInteiro("Idade do atleta")));
         }
 
         private void ExcluiAtleta(string filtro)
         {
+            cad.ExcluiAtleta(filtro);
         }
 
         private void ImprimeAtletas(string nome)
         {
+            cad.ImprimeAtletas(nome);
         }
 
         private void FiltraAtletas(string situacao, int idade)
         {
-
+            cad.FiltraSituacaoIdade(situacao, idade);
         }
     }
 }
