@@ -1,0 +1,21 @@
+D:\Aulas\2016-4\Tópicos em SI\Projetos_Exemplo\Colecoes\Colecoes\bin\Debug\Colecoes.exe.config
+D:\Aulas\2016-4\Tópicos em SI\Projetos_Exemplo\Colecoes\Colecoes\obj\Debug\Colecoes.csprojResolveAssemblyReference.cache
+D:\Aulas\2016-4\Tópicos em SI\Projetos_Exemplo\Colecoes\Colecoes\bin\Debug\Colecoes.exe
+D:\Aulas\2016-4\Tópicos em SI\Projetos_Exemplo\Colecoes\Colecoes\bin\Debug\Colecoes.pdb
+D:\Aulas\2016-4\Tópicos em SI\Projetos_Exemplo\Colecoes\Colecoes\obj\Debug\Colecoes.exe
+D:\Aulas\2016-4\Tópicos em SI\Projetos_Exemplo\Colecoes\Colecoes\obj\Debug\Colecoes.pdb
+D:\Material Oficial - C#\2021\Colecoes\Colecoes\bin\Debug\Colecoes.exe.config
+D:\Material Oficial - C#\2021\Colecoes\Colecoes\bin\Debug\Colecoes.exe
+D:\Material Oficial - C#\2021\Colecoes\Colecoes\bin\Debug\Colecoes.pdb
+D:\Material Oficial - C#\2021\Colecoes\Colecoes\obj\Debug\Colecoes.csprojAssemblyReference.cache
+D:\Material Oficial - C#\2021\Colecoes\Colecoes\obj\Debug\Colecoes.csproj.CoreCompileInputs.cache
+D:\Material Oficial - C#\2021\Colecoes\Colecoes\obj\Debug\Colecoes.exe
+D:\Material Oficial - C#\2021\Colecoes\Colecoes\obj\Debug\Colecoes.pdb
+E:\Projetos_Aula_FSG\Aula 05 - Coleções\Colecoes\Colecoes\bin\Debug\Colecoes.exe.config
+E:\Projetos_Aula_FSG\Aula 05 - Coleções\Colecoes\Colecoes\bin\Debug\Colecoes.exe
+E:\Projetos_Aula_FSG\Aula 05 - Coleções\Colecoes\Colecoes\bin\Debug\Colecoes.pdb
+E:\Projetos_Aula_FSG\Aula 05 - Coleções\Colecoes\Colecoes\obj\Debug\Colecoes.csproj.AssemblyReference.cache
+E:\Projetos_Aula_FSG\Aula 05 - Coleções\Colecoes\Colecoes\obj\Debug\Colecoes.csproj.SuggestedBindingRedirects.cache
+E:\Projetos_Aula_FSG\Aula 05 - Coleções\Colecoes\Colecoes\obj\Debug\Colecoes.csproj.CoreCompileInputs.cache
+E:\Projetos_Aula_FSG\Aula 05 - Coleções\Colecoes\Colecoes\obj\Debug\Colecoes.exe
+E:\Projetos_Aula_FSG\Aula 05 - Coleções\Colecoes\Colecoes\obj\Debug\Colecoes.pdb
