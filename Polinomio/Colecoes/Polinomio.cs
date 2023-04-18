@@ -1,57 +1,48 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Polinomio
 {
-    public class Termo 
+    public class Polinomio : IComparable<Polinomio>
     {
-        private int coeficiente;
-        private int expoente;
-        private int id;
+        string id;
+        string val;
 
-        private int somaPolinomio;
-        public Termo()
+        public Polinomio()
         {
-            coeficiente= 0;
-            expoente= 0;
+            this.id = "";
+            this.val = "";
         }
-        public Termo(int coeficiente, int expoente)
-        {
-            this.coeficiente = coeficiente;
-            this.expoente= expoente;
 
-            
-        }
-        public int Coeficiente
+        public Polinomio(string id, string val)
         {
-            get { return coeficiente; }
-            set { coeficiente = value; }
+            this.id = id;
+            this.val = val;
         }
-        public int Expoente
+
+        public string Id
         {
-            get { return expoente; }
-            set { expoente = value; }
+            get { return id; }
+            set { id = value; }
         }
-        public int SomaPolinomio()
+        public string Val
         {
-            return 0;
+            get { return val; }
+            set { val = value; }
         }
 
         public override string ToString()
         {
-            return $"\nAtleta {nome}, \n{idade} anos, \n{peso} Kg, \n{altura} de altura, \nIMC: {imc:f2} , {RetornaSituacao(situacao)}";
-        }
-        public int CompareTo(Polinomio atleta)
-        {
-            // return aluno.Nome.CompareTo(this.Nome); //Ordem alfabética decrescente
-            return this.Nome.CompareTo(atleta.Nome); //Ordem alfabética crescente
+            return $"\nNome: {id}\nPolinomio: {val}";
         }
 
+        public int CompareTo(Polinomio pl)
+        {
+            return this.Id.CompareTo(pl.Id);
+        }
 
     }
 }

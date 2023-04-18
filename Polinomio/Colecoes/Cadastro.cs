@@ -9,32 +9,30 @@ namespace Polinomio
 {
     public class Cadastro
     {
-        List<Termo> list;
+        List<Polinomio> list;
         public Cadastro()
         {
-            list = new List<Termo>
-            {
-                new Termo(2, 1),
-                new Termo(1,2)
-            };
+            //Fazer dados fake aq
         }
 
-        public void ImprimePolinomio(int id)
+        public void ImprimePolinomios(string id)
         {
             if (id == null)
             {
-                foreach (Termo polinomio in list)
+                foreach (Polinomio pl in list)
                 {
-                    Console.WriteLine(polinomio.ToString());
+                    Console.WriteLine(pl.ToString());
                 }
             }
             else
             {
-                foreach (Termo polinomio in list)
+                string f = id.ToUpper();
+                foreach (Polinomio pl in list)
                 {
-                    if (polinomio. == id)
+                    string i = pl.Id.ToUpper();
+                    if (i.Equals(f))
                     {
-                        Console.WriteLine(polinomio.ToString());
+                        Console.WriteLine(pl.ToString());
                     }
                 }
             }
@@ -42,18 +40,20 @@ namespace Polinomio
 
         public void InserePolinomio(Termo polinomio)
         {
+            //Ir ADD termo até que o cara deseja
             list.Add(polinomio);
             Console.WriteLine("\nAtleta inserido com sucesso");
         }
 
-        public void ExcluiPolinomio(int filtro) { 
+        public void ExcluiPolinomio(int filtro)
+        {
         }
 
         public void FiltraSituacaoIdade(string situacao, int idade)
         {
-           
-            }
-        }
 
+        }
     }
+
+}
 }

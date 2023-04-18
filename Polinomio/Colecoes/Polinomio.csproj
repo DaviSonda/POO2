@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Polinomio.cs" />
+    <Compile Include="Termo.cs" />
     <Compile Include="Cadastro.cs" />
     <Compile Include="EntradaDados.cs" />
     <Compile Include="Menu.cs" />

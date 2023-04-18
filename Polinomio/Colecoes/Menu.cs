@@ -20,10 +20,10 @@ namespace Polinomio
         private void Opcoes()
         {
             Console.WriteLine("\n1 - Inserir polinomio");
-            Console.WriteLine("\n2 - Excluir polinomio");
-            Console.WriteLine("\n3 - Listar polinomio");
-            Console.WriteLine("\n4 - Buscar polinomio por nome");
-            Console.WriteLine("\n5 - Somar dois polinomios");
+            Console.WriteLine("\n2 - Listar polinomio");
+            Console.WriteLine("\n3 - Buscar polinomio por nome");
+            Console.WriteLine("\n4 - Somar dois polinomios");
+            Console.WriteLine("\n5 - Calcula polinomio");
             Console.WriteLine("\n0 - Sair");
         }
 
@@ -36,22 +36,19 @@ namespace Polinomio
                 case 0:
                     break;
                 case 1:
-                    InsereAtleta();
+                    InserePolinomio();
                     break;
                 case 2:
-                    ExcluiAtleta(entrada.LeString("\nNome do atleta"));
+                    ImprimePolinomios(null);
                     break;
                 case 3:
-                    ImprimeAtletas(null);
+                    ImprimePolinomios(entrada.LeString("\nNome do polinomio"));
                     break;
                 case 4:
-                    ImprimeAtletas(entrada.LeString("\nNome do atleta"));
+                    CalculaPolinomios(entrada.LeString("\nNome do primeiro polinomio"), entrada.LeString("\nNome do segundo polinomio"));
                     break;
                 case 5:
-                    FiltraAtletas(entrada.LeString("\nSituação do atleta"), entrada.LeInteiro("\nIdade do atleta"));
-                    break;
-                case 6:
-                    ExcluiAtleta(entrada.LeString("\nSituação do atleta"));
+                    CalculaPolinomio(entrada.LeInteiro("\nValor de x"));
                     break;
                 default:
                     Console.WriteLine("\nOpção Inválida");
@@ -65,20 +62,19 @@ namespace Polinomio
 
         private void InserePolinomio()
         {
-            cad.InsereAtleta(new Polinomio(entrada.LeString("Nome do atleta"), entrada.LeDouble("Peso do atleta"), entrada.LeDouble("Altura do atleta"), entrada.LeInteiro("Idade do atleta")));
         }
 
-        private void ExcluiPolinomio(string filtro)
+        private void ImprimePolinomios(string nome)
         {
-            cad.ExcluiPolinomio(filtro);
+            cad.ImprimePolinomios(nome);
         }
 
-        private void ImprimeAtletas(string nome)
+        private void CalculaPolinomios(string n1, string n2)
         {
-            cad.ImprimeAtletas(nome);
+            cad.FiltraSituacaoIdade(situacao, idade);
         }
 
-        private void FiltraAtletas(string situacao, int idade)
+        private void CalculaPolinomio(int valor)
         {
             cad.FiltraSituacaoIdade(situacao, idade);
         }
