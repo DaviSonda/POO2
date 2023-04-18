@@ -36,7 +36,7 @@ namespace Polinomio
                 case 0:
                     break;
                 case 1:
-                    InserePolinomio();
+                    InserePolinomio(entrada.LeString("\nNome do polinomio"));
                     break;
                 case 2:
                     ImprimePolinomios(null);
@@ -48,7 +48,7 @@ namespace Polinomio
                     CalculaPolinomios(entrada.LeString("\nNome do primeiro polinomio"), entrada.LeString("\nNome do segundo polinomio"));
                     break;
                 case 5:
-                    CalculaPolinomio(entrada.LeInteiro("\nValor de x"));
+                    CalculaPolinomio(entrada.LeString("\nNome do polinomio"), entrada.LeDouble("\nValor de x"));
                     break;
                 default:
                     Console.WriteLine("\nOpção Inválida");
@@ -60,8 +60,9 @@ namespace Polinomio
             }
         }
 
-        private void InserePolinomio()
+        private void InserePolinomio(string id)
         {
+            cad.InserePolinomio(string id);
         }
 
         private void ImprimePolinomios(string nome)
@@ -71,12 +72,12 @@ namespace Polinomio
 
         private void CalculaPolinomios(string n1, string n2)
         {
-            cad.FiltraSituacaoIdade(situacao, idade);
+            cad.CalculaPolinomios(n1, n2);
         }
 
-        private void CalculaPolinomio(int valor)
+        private void CalculaPolinomio(string id, int valor)
         {
-            cad.FiltraSituacaoIdade(situacao, idade);
+            cad.CalculaPolinomio(id, valor);
         }
     }
 }

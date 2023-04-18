@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -42,6 +43,13 @@ namespace Polinomio
         public int CompareTo(Polinomio pl)
         {
             return this.Id.CompareTo(pl.Id);
+        }
+
+        public void Calcula(double valor)
+        {
+            //Substituir os x do valor abaixo pelo valor double da func e calcular
+            this.val;
+            //Calcular aq
         }
 
     }
