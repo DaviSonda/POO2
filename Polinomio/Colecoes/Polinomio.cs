@@ -48,6 +48,20 @@ namespace Polinomio
         public void Calcula(double valor)
         {
             //Substituir os x do valor abaixo pelo valor double da func e calcular
+            /*                
+             *                result += (long)t.Coeficiente * (long)(Math.Pow(x, t.Expoente));
+             *                
+             *                        public long Calculate(int x)
+        {
+                                long result = 0;
+                                foreach (Term t in this.Terms)
+                                {
+                                    result += (long)t.Coefficient * (long)(Math.Pow(x, t.Power));
+                                }
+                                return result;
+        }
+
+             */
             this.val;
             //Calcular aq
         }
