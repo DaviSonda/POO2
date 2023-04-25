@@ -46,38 +46,17 @@ namespace Polinomio
             //Fazer while pra ele ir criando termos e ir inserindo nessa lista
             //Ir criando termo e add na list até que o cara deseja
             //e no fim inserir um novo polinomio com o nome q ele quis
-            /*
-              public int Add(Term value)
-        {
-            if (value.Coefficient != 0)
-            {
-                if (this.HasTermByPower(value.Power))
-                {
-                    this.AddToEqualPower(value);
-                    return -1;
-                }
-                else
-                    return (List.Add(value));
-            }
-            else
-                return -1;
-        }
 
-            //Verifica se o expoente é igual
-                    public void AddToEqualExpoente(Term value)
-        {
-            foreach (Term t in List)
+            while(tl.Count > 0)
             {
-                if (t.Power == value.Power)
-                    t.Coefficient += value.Coefficient;
+                tl.Add(new Termo());
             }
-        }*/
             foreach (Termo t in tl)
             {
                 pol += t.ToString();//Aq é a lógica de como concatenar o negócio ai tenk ver como vai ser
             }
             list.Add(new Polinomio(nome, pol)); //Segunda variável daq vai ser o valor
-            Console.WriteLine($"\nAtleta {nome} com sucesso");
+            Console.WriteLine($"\nPolinomio {nome} com sucesso");
         }
 
         public void CalculaPolinomios(string n1, string n2)
@@ -100,15 +79,9 @@ namespace Polinomio
             }
             //Aq deve dar display de erro caso os dois polinomios n estiverem preenchidos
             //Após deve ser feita a soma dos polinomios como está no txt
-            /*
-             *         public static Poly (Poly p1, Poly p2)
-                 {
-                    Poly result = new Poly(p1.ToString());
-                    foreach (Term t in p2.Terms)
-                        result.Terms.Add(t);
-                    return result;
-                }
-             */
+            Polinomio result = new Polinomio(p1.Id, p1.Val) ;
+            foreach ()
+
         }
 
         public void CalculaPolinomio(string id, double valor)

@@ -10,18 +10,18 @@ namespace Polinomio
     public class Polinomio : IComparable<Polinomio>
     {
         string id;
-        string val;
+        List<Termo> val;
 
         public Polinomio()
         {
             this.id = "";
-            this.val = "";
+            this.val = new List<Termo>();
         }
 
-        public Polinomio(string id, string val)
+        public Polinomio(string id, List<Termo> val)
         {
             this.id = id;
-            this.val = val;
+            this.val = new List<Termo>();
         }
 
         public string Id
@@ -29,7 +29,7 @@ namespace Polinomio
             get { return id; }
             set { id = value; }
         }
-        public string Val
+        public List<Termo> Val
         {
             get { return val; }
             set { val = value; }
@@ -45,25 +45,14 @@ namespace Polinomio
             return this.Id.CompareTo(pl.Id);
         }
 
-        public void Calcula(double valor)
+        public long Calcula(double valor)
         {
-            //Substituir os x do valor abaixo pelo valor double da func e calcular
-            /*                
-             *                result += (long)t.Coeficiente * (long)(Math.Pow(x, t.Expoente));
-             *                
-             *                        public long Calculate(int x)
-        {
-                                long result = 0;
-                                foreach (Term t in this.Terms)
-                                {
-                                    result += (long)t.Coefficient * (long)(Math.Pow(x, t.Power));
-                                }
-                                return result;
-        }
-
-             */
-            this.val;
-            //Calcular aq
+            long result = 0;
+            foreach (Termo t in val)
+            {
+                result += (long)t.Coeficiente * (long)(Math.Pow(valor, t.Expoente));
+            }
+            return result;
         }
 
     }

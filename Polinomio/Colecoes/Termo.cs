@@ -36,32 +36,32 @@ namespace Polinomio
         }
 
 
-        /* // VERIFICAR LÓGICA PARA ADICIONAR + E - PARA NÚMEROS:
-         * public override string ToString()
+         // VERIFICAR LÓGICA PARA ADICIONAR + E - PARA NÚMEROS:
+         public override string ToString()
         {
             string Result = string.Empty;
-            if (Coefficient != 0)
+            if (Coeficiente != 0)
             {
-                if (this.Coefficient > 0)
+                if (this.Coeficiente > 0)
                     Result += "+";
                 else
                     Result += "-";
 
-                if (this.Power == 0)
-                    Result += (this.Coefficient < 0 ? this.Coefficient * -1 : this.Coefficient).ToString();
-                else if (this.Power == 1)
-                    if (this.Coefficient > 1 | this.Coefficient < -1)
-                        Result += string.Format("{0}x",(this.Coefficient <0 ? this.Coefficient * -1 : this.Coefficient).ToString());
+                if (this.Expoente == 0)
+                    Result += (this.Coeficiente < 0 ? this.Coeficiente * -1 : this.Coeficiente).ToString();
+                else if (this.Expoente == 1)
+                    if (this.Coeficiente > 1 | this.Coeficiente < -1)
+                        Result += string.Format("{0}x",(this.Coeficiente < 0 ? this.Coeficiente * -1 : this.Coeficiente).ToString());
                     else
                         Result += "x";
                 else
-                    if (this.Coefficient > 1 | this.Coefficient < -1)
-                        Result += string.Format("{0}x^{1}", (this.Coefficient < 0 ? this.Coefficient * -1 : this.Coefficient).ToString(), this.Power.ToString());
+                    if (this.Coeficiente > 1 | this.Coeficiente < -1)
+                        Result += string.Format("{0}x^{1}", (this.Coeficiente < 0 ? this.Coeficiente * -1 : this.Coeficiente).ToString(), this.Expoente.ToString());
                     else
-                        Result += string.Format("x^{0}",this.Power.ToString());
+                        Result += string.Format("x^{0}",this.Expoente.ToString());
             }
             return Result;
         }
-         */
+         
     }
 }
