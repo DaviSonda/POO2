@@ -10,7 +10,8 @@ namespace Polinomio
 {
     public class Cadastro
     {
-        List<Polinomio> list;
+        List<Polinomio> list = new List<Polinomio>();
+        List<Termo> tl = new List<Termo>();
         public Cadastro()
         {
             //Fazer dados fake aq
@@ -39,24 +40,18 @@ namespace Polinomio
             }
         }
 
+        public void InsereTermoPolinomio(Termo termo)
+        {
+             tl.Add(termo);
+            
+
+        }
+
         public void InserePolinomio(string nome)
         {
-            List<Termo> tl = new List<Termo>(); //Lista de onde os termos serão inseridos
-            string pol = ""; // aq será concatenado o polinomio
-            //Fazer while pra ele ir criando termos e ir inserindo nessa lista
-            //Ir criando termo e add na list até que o cara deseja
-            //e no fim inserir um novo polinomio com o nome q ele quis
-
-            while(tl.Count > 0)
-            {
-                tl.Add(new Termo());
-            }
-            foreach (Termo t in tl)
-            {
-                pol += t.ToString();//Aq é a lógica de como concatenar o negócio ai tenk ver como vai ser
-            }
-            list.Add(new Polinomio(nome, tl)); //Segunda variável daq vai ser o valor
-            Console.WriteLine($"\nPolinomio {nome} com sucesso");
+            List<Termo> termos = tl;
+            list.Add(new Polinomio(nome, termos));
+            tl = new List<Termo>();
         }
 
         public void CalculaPolinomios(string n1, string n2)
@@ -71,18 +66,20 @@ namespace Polinomio
                 if (i.Equals(f1))
                 {
                     p1 = pl;
-                    break;
-                } else if (i.Equals (f2))
+                   
+                } else if (i.Equals(f2))
                 {
                     p2 = pl;
+                    break;
                 }
             }
-            //Aq deve dar display de erro caso os dois polinomios n estiverem preenchidos
-            //Após deve ser feita a soma dos polinomios como está no txt
             Polinomio result = new Polinomio(p1.Id, p1.Val) ;
-            result.ToString();
             foreach (Termo t in p2.Val)
-            result.Val.Add(t);
+            {
+                result.Val.Add(t);
+            }
+            
+            Console.WriteLine(result.ToString());
         }
 
         public void CalculaPolinomio(string id, double valor)

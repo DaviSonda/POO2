@@ -62,7 +62,16 @@ namespace Polinomio
 
         private void InserePolinomio(string id)
         {
+            var i = 1;
+            while (i ==  1) {
+                Termo t = new Termo(entrada.LeDouble("\nInsira o Coeficiente"), entrada.LeDouble("\nInsira o Expoente"));
+
+                cad.InsereTermoPolinomio(t);
+
+                i = entrada.LeInteiro("\nDigite 1 caso você queira continuar inserindo termos: ");
+            }
             cad.InserePolinomio(id);
+
         }
 
         private void ImprimePolinomios(string nome)

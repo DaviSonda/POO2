@@ -17,7 +17,7 @@ namespace Polinomio
             coeficiente = 0;
             expoente = 0;
         }
-        public Termo(int coeficiente, int expoente)
+        public Termo(double coeficiente, double expoente)
         {
             this.coeficiente = coeficiente;
             this.expoente = expoente;
@@ -60,6 +60,7 @@ namespace Polinomio
                     else
                         Result += string.Format("x^{0}",this.Expoente.ToString());
             }
+            
             return Result;
         }
          

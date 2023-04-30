@@ -21,7 +21,7 @@ namespace Polinomio
         public Polinomio(string id, List<Termo> val)
         {
             this.id = id;
-            this.val = new List<Termo>();
+            this.val = val;
         }
 
         public string Id
@@ -37,7 +37,19 @@ namespace Polinomio
 
         public override string ToString()
         {
-            return $"\nNome: {id}\nPolinomio: {val}";
+            var AA = DisplayPolinomio(val);
+            return $"\nNome: {id}\nPolinomio: {AA}";
+        }
+
+        public string DisplayPolinomio(List<Termo> tl)
+        {
+            string str = "";
+            foreach (Termo t in tl)
+            {
+                str += t.ToString(); 
+            }
+
+            return str ;
         }
 
         public int CompareTo(Polinomio pl)
@@ -52,7 +64,9 @@ namespace Polinomio
             {
                 result += (long)t.Coeficiente * (long)(Math.Pow(valor, t.Expoente));
             }
+            Console.WriteLine(result);
             return result;
+
         }
 
     }
