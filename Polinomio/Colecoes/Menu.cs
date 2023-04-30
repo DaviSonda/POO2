@@ -1,4 +1,4 @@
-﻿using Imc;
+﻿using Polinomio;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -48,7 +48,7 @@ namespace Polinomio
                     CalculaPolinomios(entrada.LeString("\nNome do primeiro polinomio"), entrada.LeString("\nNome do segundo polinomio"));
                     break;
                 case 5:
-                    CalculaPolinomio(entrada.LeString("\nNome do polinomio"), entrada.LeDouble("\nValor de x"));
+                    CalculaPolinomio(entrada.LeString("\nNome do polinomio"), entrada.LeInteiro("\nValor de x"));
                     break;
                 default:
                     Console.WriteLine("\nOpção Inválida");
@@ -62,7 +62,7 @@ namespace Polinomio
 
         private void InserePolinomio(string id)
         {
-            cad.InserePolinomio(string id);
+            cad.InserePolinomio(id);
         }
 
         private void ImprimePolinomios(string nome)

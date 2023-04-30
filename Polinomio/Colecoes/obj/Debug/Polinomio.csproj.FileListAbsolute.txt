@@ -1,0 +1,8 @@
+C:\Users\carlo\OneDrive\Área de Trabalho\POO2-main\Polinomio\Colecoes\bin\Debug\Colecoes.exe.config
+C:\Users\carlo\OneDrive\Área de Trabalho\POO2-main\Polinomio\Colecoes\bin\Debug\Colecoes.exe
+C:\Users\carlo\OneDrive\Área de Trabalho\POO2-main\Polinomio\Colecoes\bin\Debug\Colecoes.pdb
+C:\Users\carlo\OneDrive\Área de Trabalho\POO2-main\Polinomio\Colecoes\obj\Debug\Polinomio.csproj.AssemblyReference.cache
+C:\Users\carlo\OneDrive\Área de Trabalho\POO2-main\Polinomio\Colecoes\obj\Debug\Polinomio.csproj.SuggestedBindingRedirects.cache
+C:\Users\carlo\OneDrive\Área de Trabalho\POO2-main\Polinomio\Colecoes\obj\Debug\Polinomio.csproj.CoreCompileInputs.cache
+C:\Users\carlo\OneDrive\Área de Trabalho\POO2-main\Polinomio\Colecoes\obj\Debug\Colecoes.exe
+C:\Users\carlo\OneDrive\Área de Trabalho\POO2-main\Polinomio\Colecoes\obj\Debug\Colecoes.pdb

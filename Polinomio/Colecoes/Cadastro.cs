@@ -55,7 +55,7 @@ namespace Polinomio
             {
                 pol += t.ToString();//Aq é a lógica de como concatenar o negócio ai tenk ver como vai ser
             }
-            list.Add(new Polinomio(nome, pol)); //Segunda variável daq vai ser o valor
+            list.Add(new Polinomio(nome, tl)); //Segunda variável daq vai ser o valor
             Console.WriteLine($"\nPolinomio {nome} com sucesso");
         }
 
@@ -80,8 +80,9 @@ namespace Polinomio
             //Aq deve dar display de erro caso os dois polinomios n estiverem preenchidos
             //Após deve ser feita a soma dos polinomios como está no txt
             Polinomio result = new Polinomio(p1.Id, p1.Val) ;
-            foreach ()
-
+            result.ToString();
+            foreach (Termo t in p2.Val)
+            result.Val.Add(t);
         }
 
         public void CalculaPolinomio(string id, double valor)
