@@ -1,0 +1,12 @@
+D:\GitHub\POO2\UI1Aula\bin\Debug\UI1Aula.exe.config
+D:\GitHub\POO2\UI1Aula\bin\Debug\UI1Aula.exe
+D:\GitHub\POO2\UI1Aula\bin\Debug\UI1Aula.pdb
+D:\GitHub\POO2\UI1Aula\obj\Debug\UI1Aula.csproj.AssemblyReference.cache
+D:\GitHub\POO2\UI1Aula\obj\Debug\UI1Aula.csproj.SuggestedBindingRedirects.cache
+D:\GitHub\POO2\UI1Aula\obj\Debug\UI1Aula.Properties.Resources.resources
+D:\GitHub\POO2\UI1Aula\obj\Debug\UI1Aula.csproj.GenerateResource.cache
+D:\GitHub\POO2\UI1Aula\obj\Debug\UI1Aula.csproj.CoreCompileInputs.cache
+D:\GitHub\POO2\UI1Aula\obj\Debug\UI1Aula.exe
+D:\GitHub\POO2\UI1Aula\obj\Debug\UI1Aula.pdb
+D:\GitHub\POO2\UI1Aula\obj\Debug\UI1Aula.FormPrincipal.resources
+D:\GitHub\POO2\UI1Aula\obj\Debug\UI1Aula.FormVendedor.resources
