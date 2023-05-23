@@ -91,22 +91,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\whunt.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\f1dc05753c20051d88539dd39f856ca9.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\gokuvasco.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\vegetacareca.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\ssj24.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\luffyrebaixado.jpg" />
+    <Folder Include="Resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

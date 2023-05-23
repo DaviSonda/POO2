@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPrincipal));
             this.menuOpcoes = new System.Windows.Forms.MenuStrip();
             this.menuCadastro = new System.Windows.Forms.ToolStripMenuItem();
             this.itemMenuVendedores = new System.Windows.Forms.ToolStripMenuItem();
@@ -39,7 +38,6 @@
             // 
             // menuOpcoes
             // 
-            this.menuOpcoes.BackgroundImage = global::UI1Aula.Properties.Resources.vegetacareca;
             this.menuOpcoes.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuCadastro});
             this.menuOpcoes.Location = new System.Drawing.Point(0, 0);
@@ -54,15 +52,13 @@
             this.itemMenuVendedores,
             this.ItemMenuSepara1,
             this.itemMenuSair});
-            this.menuCadastro.Image = global::UI1Aula.Properties.Resources.luffyrebaixado;
             this.menuCadastro.Name = "menuCadastro";
-            this.menuCadastro.Size = new System.Drawing.Size(82, 20);
+            this.menuCadastro.Size = new System.Drawing.Size(66, 20);
             this.menuCadastro.Text = "&Cadastro";
             this.menuCadastro.Click += new System.EventHandler(this.cadastroToolStripMenuItem_Click);
             // 
             // itemMenuVendedores
             // 
-            this.itemMenuVendedores.Image = global::UI1Aula.Properties.Resources.vegetacareca;
             this.itemMenuVendedores.Name = "itemMenuVendedores";
             this.itemMenuVendedores.Size = new System.Drawing.Size(135, 22);
             this.itemMenuVendedores.Text = "&Vendedores";
@@ -75,7 +71,6 @@
             // 
             // itemMenuSair
             // 
-            this.itemMenuSair.Image = global::UI1Aula.Properties.Resources.ssj24;
             this.itemMenuSair.Name = "itemMenuSair";
             this.itemMenuSair.Size = new System.Drawing.Size(135, 22);
             this.itemMenuSair.Text = "&Sair";
@@ -86,10 +81,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Desktop;
-            this.BackgroundImage = global::UI1Aula.Properties.Resources.gokuvasco;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.menuOpcoes);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuOpcoes;
             this.Name = "FormPrincipal";
             this.Text = "UI";

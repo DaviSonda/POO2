@@ -75,7 +75,6 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Image = global::UI1Aula.Properties.Resources.ssj24;
             this.label4.Location = new System.Drawing.Point(71, 176);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(38, 13);
@@ -169,7 +168,6 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::UI1Aula.Properties.Resources.vegetacareca;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.btnConsultar);
@@ -184,7 +182,6 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormVendedor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro de Vendedor";
