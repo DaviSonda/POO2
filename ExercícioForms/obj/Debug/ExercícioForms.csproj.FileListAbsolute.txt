@@ -12,3 +12,17 @@ C:\Users\autologon\Desktop\0254797\ExercícioForms\obj\Debug\ExercícioForms.pdb
 C:\Users\autologon\Desktop\0254797\ExercícioForms\obj\Debug\ExercícioForms.FormJokenpo.resources
 C:\Users\autologon\Desktop\0254797\ExercícioForms\obj\Debug\ExercícioForms.FormPlanetas.resources
 C:\Users\autologon\Desktop\0254797\ExercícioForms\obj\Debug\ExercícioForms.FormTriangulo.resources
+D:\GitHub\POO2\ExercícioForms\bin\Debug\ExercícioForms.exe.config
+D:\GitHub\POO2\ExercícioForms\bin\Debug\ExercícioForms.exe
+D:\GitHub\POO2\ExercícioForms\bin\Debug\ExercícioForms.pdb
+D:\GitHub\POO2\ExercícioForms\obj\Debug\ExercícioForms.csproj.AssemblyReference.cache
+D:\GitHub\POO2\ExercícioForms\obj\Debug\ExercícioForms.csproj.SuggestedBindingRedirects.cache
+D:\GitHub\POO2\ExercícioForms\obj\Debug\ExercícioForms.FormJokenpo.resources
+D:\GitHub\POO2\ExercícioForms\obj\Debug\ExercícioForms.FormPlanetas.resources
+D:\GitHub\POO2\ExercícioForms\obj\Debug\ExercícioForms.FormPrincipal.resources
+D:\GitHub\POO2\ExercícioForms\obj\Debug\ExercícioForms.FormTriangulo.resources
+D:\GitHub\POO2\ExercícioForms\obj\Debug\ExercícioForms.Properties.Resources.resources
+D:\GitHub\POO2\ExercícioForms\obj\Debug\ExercícioForms.csproj.GenerateResource.cache
+D:\GitHub\POO2\ExercícioForms\obj\Debug\ExercícioForms.csproj.CoreCompileInputs.cache
+D:\GitHub\POO2\ExercícioForms\obj\Debug\ExercícioForms.exe
+D:\GitHub\POO2\ExercícioForms\obj\Debug\ExercícioForms.pdb

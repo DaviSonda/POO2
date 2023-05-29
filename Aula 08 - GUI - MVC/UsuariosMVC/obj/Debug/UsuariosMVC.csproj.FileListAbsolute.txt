@@ -1,0 +1,11 @@
+E:\Projetos_Aula_FSG\Aula 08 - GUI - MVC\UsuariosMVC\bin\Debug\UsuariosMVC.exe.config
+E:\Projetos_Aula_FSG\Aula 08 - GUI - MVC\UsuariosMVC\bin\Debug\UsuariosMVC.exe
+E:\Projetos_Aula_FSG\Aula 08 - GUI - MVC\UsuariosMVC\bin\Debug\UsuariosMVC.pdb
+E:\Projetos_Aula_FSG\Aula 08 - GUI - MVC\UsuariosMVC\obj\Debug\UsuariosMVC.csproj.AssemblyReference.cache
+E:\Projetos_Aula_FSG\Aula 08 - GUI - MVC\UsuariosMVC\obj\Debug\UsuariosMVC.csproj.SuggestedBindingRedirects.cache
+E:\Projetos_Aula_FSG\Aula 08 - GUI - MVC\UsuariosMVC\obj\Debug\UsuariosMVC.FrmUsuarios.resources
+E:\Projetos_Aula_FSG\Aula 08 - GUI - MVC\UsuariosMVC\obj\Debug\UsuariosMVC.Properties.Resources.resources
+E:\Projetos_Aula_FSG\Aula 08 - GUI - MVC\UsuariosMVC\obj\Debug\UsuariosMVC.csproj.GenerateResource.cache
+E:\Projetos_Aula_FSG\Aula 08 - GUI - MVC\UsuariosMVC\obj\Debug\UsuariosMVC.csproj.CoreCompileInputs.cache
+E:\Projetos_Aula_FSG\Aula 08 - GUI - MVC\UsuariosMVC\obj\Debug\UsuariosMVC.exe
+E:\Projetos_Aula_FSG\Aula 08 - GUI - MVC\UsuariosMVC\obj\Debug\UsuariosMVC.pdb
