@@ -70,6 +70,8 @@
     <Compile Include="FormTriangulo.Designer.cs">
       <DependentUpon>FormTriangulo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Jokenpo.cs" />
+    <Compile Include="JokenpoEnum.cs" />
     <Compile Include="Peso.cs" />
     <Compile Include="PlanetaEnum.cs" />
     <Compile Include="Program.cs" />
