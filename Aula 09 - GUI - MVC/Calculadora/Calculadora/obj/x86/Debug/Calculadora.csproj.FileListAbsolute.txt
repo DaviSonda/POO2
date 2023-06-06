@@ -1,0 +1,27 @@
+E:\temp\Calculadora\Calculadora\bin\Debug\Calculadora.exe
+E:\temp\Calculadora\Calculadora\bin\Debug\Calculadora.pdb
+E:\temp\Calculadora\Calculadora\obj\x86\Debug\Calculadora.Form1.resources
+E:\temp\Calculadora\Calculadora\obj\x86\Debug\Calculadora.Properties.Resources.resources
+E:\temp\Calculadora\Calculadora\obj\x86\Debug\Calculadora.csproj.GenerateResource.Cache
+E:\temp\Calculadora\Calculadora\obj\x86\Debug\Calculadora.exe
+E:\temp\Calculadora\Calculadora\obj\x86\Debug\Calculadora.pdb
+E:\temp\Calculadora\Calculadora\obj\x86\Debug\Calculadora.csprojResolveAssemblyReference.cache
+D:\Material Oficial - C#\Projetos C#\Calculadora\Calculadora\bin\Debug\Calculadora.exe
+D:\Material Oficial - C#\Projetos C#\Calculadora\Calculadora\bin\Debug\Calculadora.pdb
+D:\Material Oficial - C#\Projetos C#\Calculadora\Calculadora\obj\x86\Debug\Calculadora.csprojResolveAssemblyReference.cache
+D:\Material Oficial - C#\Projetos C#\Calculadora\Calculadora\obj\x86\Debug\Calculadora.Form1.resources
+D:\Material Oficial - C#\Projetos C#\Calculadora\Calculadora\obj\x86\Debug\Calculadora.Properties.Resources.resources
+D:\Material Oficial - C#\Projetos C#\Calculadora\Calculadora\obj\x86\Debug\Calculadora.csproj.GenerateResource.Cache
+D:\Material Oficial - C#\Projetos C#\Calculadora\Calculadora\obj\x86\Debug\Calculadora.exe
+D:\Material Oficial - C#\Projetos C#\Calculadora\Calculadora\obj\x86\Debug\Calculadora.pdb
+E:\Material Oficial - C#\Projetos C#\Calculadora\Calculadora\bin\Debug\Calculadora.exe.config
+E:\Material Oficial - C#\Projetos C#\Calculadora\Calculadora\bin\Debug\Calculadora.exe
+E:\Material Oficial - C#\Projetos C#\Calculadora\Calculadora\bin\Debug\Calculadora.pdb
+E:\Material Oficial - C#\Projetos C#\Calculadora\Calculadora\obj\x86\Debug\Calculadora.csproj.AssemblyReference.cache
+E:\Material Oficial - C#\Projetos C#\Calculadora\Calculadora\obj\x86\Debug\Calculadora.csproj.SuggestedBindingRedirects.cache
+E:\Material Oficial - C#\Projetos C#\Calculadora\Calculadora\obj\x86\Debug\Calculadora.Properties.Resources.resources
+E:\Material Oficial - C#\Projetos C#\Calculadora\Calculadora\obj\x86\Debug\Calculadora.csproj.GenerateResource.cache
+E:\Material Oficial - C#\Projetos C#\Calculadora\Calculadora\obj\x86\Debug\Calculadora.csproj.CoreCompileInputs.cache
+E:\Material Oficial - C#\Projetos C#\Calculadora\Calculadora\obj\x86\Debug\Calculadora.exe
+E:\Material Oficial - C#\Projetos C#\Calculadora\Calculadora\obj\x86\Debug\Calculadora.pdb
+E:\Material Oficial - C#\Projetos C#\Calculadora\Calculadora\obj\x86\Debug\Calculadora.CalculadoraView.resources

@@ -9,87 +9,87 @@ namespace UsuariosMVC
 {
   public class UsuariosController
   {
-    IUsuariosView _view;
-    IList _usuarios;
-    Usuario _selectedUser;
+    IUsuariosView view;
+    IList usuarios;
+    Usuario usuarioSelecionado;
 
-    public UsuariosController(IUsuariosView view, IList users)
+    public UsuariosController(IUsuariosView _view, IList _users)
     {
-      _view = view;
-      _usuarios = users;
+      view = _view;
+      usuarios = _users;
       view.SetController(this);
     }
 
-    public IList Users
+    public IList Usuarios
     {
-      get { return ArrayList.ReadOnly(_usuarios); }
+      get { return ArrayList.ReadOnly(usuarios); }
     }
 
-    private void updateViewDetailValues(Usuario usr)
+    private void atualizaDadosView(Usuario usuario)
     {
-      _view.FirstName = usr.Nome;
-      _view.LastName = usr.Sobrenome;
-      _view.ID = usr.ID;
-      _view.Department = usr.Departamento;
-      _view.Sex = usr.Sexo;
+      view.Nome = usuario.Nome;
+      view.Sobrenome = usuario.Sobrenome;
+      view.ID = usuario.ID;
+      view.Departamento = usuario.Departamento;
+      view.Sexo = usuario.Sexo;
     }
 
-    private void updateUserWithViewValues(Usuario usr)
+    private void atualizaUsuario(Usuario usuario)
     {
-      usr.Nome = _view.FirstName;
-      usr.Sobrenome = _view.LastName;
-      usr.ID = _view.ID;
-      usr.Departamento = _view.Department;
-      usr.Sexo = _view.Sex;
+      usuario.Nome = view.Nome;
+      usuario.Sobrenome = view.Sobrenome;
+      usuario.ID = view.ID;
+      usuario.Departamento = view.Departamento;
+      usuario.Sexo = view.Sexo;
     }
 
 
     public void LoadView()
     {
-      _view.ClearGrid();
-      foreach (Usuario usr in _usuarios)
-        _view.AddUserToGrid(usr);
+      view.LimpaGrade();
+      foreach (Usuario usr in usuarios)
+        view.AdicionaUsuarioGrade(usr);
 
-      _view.SetSelectedUserInGrid((Usuario)_usuarios[0]);
+      view.SetUsuarioSelecionadoGrade((Usuario)usuarios[0]);
 
     }
 
     public void SelectedUserChanged(string selectedUserId)
     {
-      foreach (Usuario usr in this._usuarios)
+      foreach (Usuario usr in this.usuarios)
       {
         if (usr.ID == selectedUserId)
         {
-          _selectedUser = usr;
-          updateViewDetailValues(usr);
-          _view.SetSelectedUserInGrid(usr);
-          this._view.CanModifyID = false;
+          usuarioSelecionado = usr;
+          atualizaDadosView(usr);
+          view.SetUsuarioSelecionadoGrade(usr);
+          this.view.PodeModificarId = false;
           break;
         }
       }
     }
 
 
-    public void AddNewUser()
+    public void AddNovoUsuario()
     {
-      _selectedUser = new Usuario(""/*firstname*/,
-                               "" /*lastname*/,
-                               ""  /*id*/,
-                               "" /*department*/,
-                               Usuario.SexoPessoa.Masculino /*sex*/);
+      usuarioSelecionado = new Usuario(""/* nome */,
+                               "" /* sobrenome */,
+                               ""  /* id */,
+                               "" /* departamento */,
+                               Usuario.SexoPessoa.Masculino /* sexo */);
 
-      this.updateViewDetailValues(_selectedUser);
-      this._view.CanModifyID = true;
+      this.atualizaDadosView(usuarioSelecionado);
+      this.view.PodeModificarId = true;
     }
 
-    public void RemoveUser()
+    public void ExcluiUsuario()
     {
-      string id = this._view.GetIdOfSelectedUserInGrid();
+      string id = this.view.GetIdUsuarioSelecionadoNaGrade();
       Usuario userToRemove = null;
 
       if (id != "")
       {
-        foreach (Usuario usr in this._usuarios)
+        foreach (Usuario usr in this.usuarios)
         {
           if (usr.ID == id)
           {
@@ -100,34 +100,34 @@ namespace UsuariosMVC
 
         if (userToRemove != null)
         {
-          int newSelectedIndex = this._usuarios.IndexOf(userToRemove);
-          this._usuarios.Remove(userToRemove);
-          this._view.RemoveUserFromGrid(userToRemove);
+          int newSelectedIndex = this.usuarios.IndexOf(userToRemove);
+          this.usuarios.Remove(userToRemove);
+          this.view.RemoveUsuarioDaGrade(userToRemove);
 
-          if (newSelectedIndex > -1 && newSelectedIndex < _usuarios.Count)
+          if (newSelectedIndex > -1 && newSelectedIndex < usuarios.Count)
           {
-            this._view.SetSelectedUserInGrid((Usuario)_usuarios[newSelectedIndex]);
+            this.view.SetUsuarioSelecionadoGrade((Usuario)usuarios[newSelectedIndex]);
           }
         }
       }
     }
 
-    public void Save()
+    public void Salvar()
     {
-      updateUserWithViewValues(_selectedUser);
-      if (!this._usuarios.Contains(_selectedUser))
+      atualizaUsuario(usuarioSelecionado);
+      if (!this.usuarios.Contains(usuarioSelecionado))
       {
-        // Add new user
-        this._usuarios.Add(_selectedUser);
-        this._view.AddUserToGrid(_selectedUser);
+        // Adiciona novo usuario
+        this.usuarios.Add(usuarioSelecionado);
+        this.view.AdicionaUsuarioGrade(usuarioSelecionado);
       }
       else
       {
-        // Update existing
-        this._view.UpdateGridWithChangedUser(_selectedUser);
+        // Atualiza existente
+        this.view.AtualizaGradeComUsuarioModificado(usuarioSelecionado);
       }
-      _view.SetSelectedUserInGrid(_selectedUser);
-      this._view.CanModifyID = false;
+      view.SetUsuarioSelecionadoGrade(usuarioSelecionado);
+      this.view.PodeModificarId = false;
 
     }
   }

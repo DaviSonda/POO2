@@ -8,71 +8,58 @@ namespace UsuariosMVC
 {
   public class Usuario
   {
-    public Usuario(string nome, string sobrenome, string id, string depto, SexoPessoa sexo)
+    private string id;
+    private string nome;
+    private string sobrenome;
+    private string departamento;
+    private SexoPessoa sexo;
+
+    public Usuario(string _nome, string _sobrenome, string _id, string _depto, SexoPessoa _sexo)
     {
-      Nome = nome;
-      Sobrenome = sobrenome;
-      ID = id;
-      Departamento = depto;
-      Sexo = sexo;
+      nome = _nome;
+      sobrenome = _sobrenome;
+      id = _id;
+      departamento = _depto;
+      sexo = _sexo;
+    }
+    public string Nome
+    {
+      get { return nome; }
+      set
+      {
+        nome = value;
+      }
     }
     public enum SexoPessoa
     {
       Masculino = 1,
       Feminino = 2
     }
-
-    private string _Nome;
-    public string Nome
-    {
-      get { return _Nome; }
-      set
-      {
-        if (value.Length > 50)
-          Console.WriteLine("Erro! Nome deve ter menos de 51 caracteres!");
-        else
-          _Nome = value;
-      }
-    }
-
-    private string _Sobrenome;
     public string Sobrenome
     {
-      get { return _Sobrenome; }
+      get { return sobrenome; }
       set
       {
-        if (value.Length > 50)
-          Console.WriteLine("Erro! Sobrenome deve ter menos de 51 caracteres!");
-        else
-          _Sobrenome = value;
+        sobrenome = value;
       }
     }
-
-    private string _ID;
     public string ID
     {
-      get { return _ID; }
+      get { return id; }
       set
       {
-        if (value.Length > 9)
-          Console.WriteLine("Erro! ID deve ter menos de 10 caracteres!");
-        else
-          _ID = value;
+        id = value;
       }
     }
-
-    private string _Departamento;
     public string Departamento
     {
-      get { return _Departamento; }
-      set { _Departamento = value; }
+      get { return departamento; }
+      set { departamento = value; }
     }
-
-    private SexoPessoa _Sexo;
     public SexoPessoa Sexo
     {
-      get { return _Sexo; }
-      set { _Sexo = value; }
+      get { return sexo; }
+      set { sexo = value; }
     }
   }
 }

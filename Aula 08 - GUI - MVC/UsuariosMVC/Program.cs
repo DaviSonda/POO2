@@ -15,7 +15,7 @@ namespace UsuariosMVC
     [STAThread]
     static void Main()
     {
-      FrmUsuarios view = new FrmUsuarios();
+      UsuariosViews view = new UsuariosViews();
       view.Visible = false;
 
       

@@ -9,18 +9,18 @@ namespace UsuariosMVC
   public interface IUsuariosView
   {
     void SetController(UsuariosController controller);
-    void ClearGrid();
-    void AddUserToGrid(Usuario user);
-    void UpdateGridWithChangedUser(Usuario user);
-    void RemoveUserFromGrid(Usuario user);
-    string GetIdOfSelectedUserInGrid();
-    void SetSelectedUserInGrid(Usuario user);
+    void LimpaGrade();
+    void AdicionaUsuarioGrade(Usuario usuario);
+    void AtualizaGradeComUsuarioModificado(Usuario usuario);
+    void RemoveUsuarioDaGrade(Usuario usuario);
+    string GetIdUsuarioSelecionadoNaGrade();
+    void SetUsuarioSelecionadoGrade(Usuario usuario);
 
-    string FirstName { get; set; }
-    string LastName { get; set; }
+    string Nome { get; set; }
+    string Sobrenome { get; set; }
     string ID { get; set; }
-    string Department { get; set; }
-    Usuario.SexoPessoa Sex { get; set; }
-    bool CanModifyID { set; }
+    string Departamento { get; set; }
+    Usuario.SexoPessoa Sexo { get; set; }
+    bool PodeModificarId { set; }
   }
 }

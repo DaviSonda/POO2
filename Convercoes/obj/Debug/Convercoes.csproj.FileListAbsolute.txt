@@ -1,0 +1,11 @@
+D:\GitHub\POO2\Convercoes\bin\Debug\Convercoes.exe.config
+D:\GitHub\POO2\Convercoes\bin\Debug\Convercoes.exe
+D:\GitHub\POO2\Convercoes\bin\Debug\Convercoes.pdb
+D:\GitHub\POO2\Convercoes\obj\Debug\Convercoes.csproj.AssemblyReference.cache
+D:\GitHub\POO2\Convercoes\obj\Debug\Convercoes.csproj.SuggestedBindingRedirects.cache
+D:\GitHub\POO2\Convercoes\obj\Debug\Convercoes.ConverterView.resources
+D:\GitHub\POO2\Convercoes\obj\Debug\Convercoes.Properties.Resources.resources
+D:\GitHub\POO2\Convercoes\obj\Debug\Convercoes.csproj.GenerateResource.cache
+D:\GitHub\POO2\Convercoes\obj\Debug\Convercoes.csproj.CoreCompileInputs.cache
+D:\GitHub\POO2\Convercoes\obj\Debug\Convercoes.exe
+D:\GitHub\POO2\Convercoes\obj\Debug\Convercoes.pdb
