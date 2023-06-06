@@ -14,9 +14,13 @@ namespace Convercoes
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ConverterView());
+            ConverterView conView = new ConverterView();
+            conView.Visible = false;
+
+            ConverterModel conModel = new ConverterModel();
+
+            ConverterController conController = new ConverterController(conView, conModel);
+            conView.ShowDialog();
         }
     }
 }

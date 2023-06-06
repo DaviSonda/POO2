@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Convercoes
 {
-    public partial class ConverterView : Form
+    public partial class ConverterView : Form, IConverterView
     {
         ConverterController controller;
         public ConverterView()
@@ -54,6 +54,7 @@ namespace Convercoes
 
         private void btnConverter_Click(object sender, EventArgs e)
         {
+            MessageBox.Show(coeficiente.Text);
             this.controller.Converter();
         }
 

@@ -22,10 +22,11 @@ namespace Convercoes
         public void Converter()
         {
             double rslt = 0;
-            MessageBox.Show("must be: " + conView.Valor + " mais esse: ", conView.Coeficiente);
             double valor = double.Parse(conView.Valor);
             this.conModel.Converter(valor, conView.Coeficiente);
+            MessageBox.Show(this.conModel.Resultado().ToString());
             rslt = this.conModel.Resultado();
+            MessageBox.Show(rslt.ToString());
             conView.Resultado = rslt.ToString();
         }
     }

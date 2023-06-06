@@ -13,16 +13,17 @@ namespace Convercoes
 
         public void Converter(double num, string coeficiente)
         {
-            MessageBox.Show("DADOS PRA TI: " + num + " mais esse: ", coeficiente);
+            MessageBox.Show("DADOS PRA TI: " + num + " mais esse: " + coeficiente);
+            MessageBox.Show("RESULTADO: " + num * this.getCoeficiente(coeficiente));
             resultado = num * this.getCoeficiente(coeficiente);
         }
 
         private double getCoeficiente(string coeficiente)
         {
-            switch(coeficiente)
-            {
+            //switch(coeficiente)
+            //{
 
-            }
+            //}
             return 10.5;
         }
 
