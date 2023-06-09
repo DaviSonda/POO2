@@ -10,39 +10,39 @@ namespace CampoMinadoDavi
 {
     public class CampoMinadoController
     {
-        private const int BoardSize = 10;
-        private const int MineCount = 15;
+        private const int TamanhoJogo = 10;
+        private const int QuantidadeMinas = 15;
 
-        private Cell[,] board;
+        private Cell[,] jogo;
         private CampoMinadoView view;
 
         public CampoMinadoController()
         {
-            board = new Cell[BoardSize, BoardSize];
+            jogo = new Cell[TamanhoJogo, TamanhoJogo];
             view = new CampoMinadoView();
-            view.ButtonClicked += View_ButtonClicked;
-            InitializeGame();
+            view.CliqueBotao += View_ButtonClicked;
+            IniciaJogo();
         }
 
-        private void InitializeGame()
+        private void IniciaJogo()
         {
-            for (int i = 0; i < BoardSize; i++)
+            for (int i = 0; i < TamanhoJogo; i++)
             {
-                for (int j = 0; j < BoardSize; j++)
+                for (int j = 0; j < TamanhoJogo; j++)
                 {
-                    board[i, j] = new Cell(CellContent.Empty, CellState.Covered);
+                    jogo[i, j] = new Cell(ItemCelula.Vazio, EstadoCelula.Coberta);
                 }
             }
 
             Random random = new Random();
             int count = 0;
-            while (count < MineCount)
+            while (count < QuantidadeMinas)
             {
-                int x = random.Next(BoardSize);
-                int y = random.Next(BoardSize);
-                if (board[x, y].Content == CellContent.Empty)
+                int x = random.Next(TamanhoJogo);
+                int y = random.Next(TamanhoJogo);
+                if (jogo[x, y].Content == ItemCelula.Vazio)
                 {
-                    board[x, y].Content = CellContent.Mine;
+                    jogo[x, y].Content = ItemCelula.Mina;
                     count++;
                 }
             }
@@ -52,67 +52,65 @@ namespace CampoMinadoDavi
         {
             if (button == MouseButtons.Left)
             {
-                if (board[x, y].State == CellState.Covered)
+                if (jogo[x, y].State == EstadoCelula.Coberta)
                 {
-                    if (board[x, y].Content == CellContent.Mine)
+                    if (jogo[x, y].Content == ItemCelula.Mina)
                     {
-                        board[x, y].State = CellState.Uncovered;
-                        view.UpdateButton(x, y, "X", Color.Red, Color.Gray);
-                        MessageBox.Show("Game Over!");
+                        jogo[x, y].State = EstadoCelula.Descoberta;
+                        view.AtualizaBotao(x, y, "X", Color.Red, Color.Gray);
+                        MessageBox.Show("Você Perdeu!");
                         view.Close();
                     }
-                    else if (GetAdjacentMineCount(x, y) == 0)
+                    else if (QtdMinasProximas(x, y) == 0)
                     {
-                        board[x, y].State = CellState.Uncovered;
-                        view.UpdateButton(x, y, "", Color.Black, Color.White);
-                        RevealEmptyNeighbors(x, y);
-                        // Handle logic for empty cell with no adjacent mines
+                        jogo[x, y].State = EstadoCelula.Descoberta;
+                        view.AtualizaBotao(x, y, "", Color.Black, Color.White);
+                        RevelaVizinhosVazios(x, y);
                     }
                     else
                     {
-                        board[x, y].State = CellState.Uncovered;
-                        int adjacentMines = GetAdjacentMineCount(x, y);
-                        string buttonText = adjacentMines.ToString();
-                        Color buttonColor = GetNumberColor(adjacentMines);
-                        view.UpdateButton(x, y, buttonText, buttonColor, Color.White);
-                        // Handle logic for empty cell or cell with adjacent mines
+                        jogo[x, y].State = EstadoCelula.Descoberta;
+                        int MinasProximas = QtdMinasProximas(x, y);
+                        string textoBotao = MinasProximas.ToString();
+                        Color corBotao = PegaCorNumero(MinasProximas);
+                        view.AtualizaBotao(x, y, textoBotao, corBotao, Color.White);
                     }
                 }
             }
             else if (button == MouseButtons.Right)
             {
-                if (board[x, y].State == CellState.Covered)
+                if (jogo[x, y].State == EstadoCelula.Coberta)
                 {
-                    board[x, y].State = CellState.Flagged;
-                    view.UpdateButton(x, y, "F", Color.Red, Color.Gray);
+                    jogo[x, y].State = EstadoCelula.Marcada;
+                    view.AtualizaBotao(x, y, "F", Color.Red, Color.Gray);
                 }
-                else if (board[x, y].State == CellState.Flagged)
+                else if (jogo[x, y].State == EstadoCelula.Marcada)
                 {
-                    board[x, y].State = CellState.Covered;
-                    view.UpdateButton(x, y, "", Color.Black, Color.LightGray);
+                    jogo[x, y].State = EstadoCelula.Coberta;
+                    view.AtualizaBotao(x, y, "", Color.Black, Color.LightGray);
                 }
             }
         }
 
-        private void RevealEmptyNeighbors(int x, int y)
+        private void RevelaVizinhosVazios(int x, int y)
         {
             for (int i = x - 1; i <= x + 1; i++)
             {
                 for (int j = y - 1; j <= y + 1; j++)
                 {
-                    if (i >= 0 && i < BoardSize && j >= 0 && j < BoardSize)
+                    if (i >= 0 && i < TamanhoJogo && j >= 0 && j < TamanhoJogo)
                     {
-                        if (board[i, j].State == CellState.Covered && board[i, j].Content != CellContent.Mine)
+                        if (jogo[i, j].State == EstadoCelula.Coberta && jogo[i, j].Content != ItemCelula.Mina)
                         {
-                            board[i, j].State = CellState.Uncovered;
-                            int adjacentMines = GetAdjacentMineCount(i, j);
-                            string buttonText = adjacentMines > 0 ? adjacentMines.ToString() : "";
-                            Color buttonColor = GetNumberColor(adjacentMines);
-                            view.UpdateButton(i, j, buttonText, buttonColor, Color.White);
+                            jogo[i, j].State = EstadoCelula.Descoberta;
+                            int minasProximas = QtdMinasProximas(i, j);
+                            string textoBotao = minasProximas > 0 ? minasProximas.ToString() : "";
+                            Color corBotao = PegaCorNumero(minasProximas);
+                            view.AtualizaBotao(i, j, textoBotao, corBotao, Color.White);
 
-                            if (adjacentMines == 0)
+                            if (minasProximas == 0)
                             {
-                                RevealEmptyNeighbors(i, j);
+                                RevelaVizinhosVazios(i, j);
                             }
                         }
                     }
@@ -120,16 +118,16 @@ namespace CampoMinadoDavi
             }
         }
 
-        private int GetAdjacentMineCount(int x, int y)
+        private int QtdMinasProximas(int x, int y)
         {
             int count = 0;
             for (int i = x - 1; i <= x + 1; i++)
             {
                 for (int j = y - 1; j <= y + 1; j++)
                 {
-                    if (i >= 0 && i < BoardSize && j >= 0 && j < BoardSize)
+                    if (i >= 0 && i < TamanhoJogo && j >= 0 && j < TamanhoJogo)
                     {
-                        if (board[i, j].Content == CellContent.Mine)
+                        if (jogo[i, j].Content == ItemCelula.Mina)
                         {
                             count++;
                         }
@@ -139,7 +137,7 @@ namespace CampoMinadoDavi
             return count;
         }
 
-        private Color GetNumberColor(int number)
+        private Color PegaCorNumero(int number)
         {
             switch (number)
             {

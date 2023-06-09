@@ -10,25 +10,25 @@ using System.Data;
 
 namespace CampoMinadoDavi
 {
-    public enum CellState
+    public enum EstadoCelula
     {
-        Covered,
-        Uncovered,
-        Flagged
+        Coberta,
+        Descoberta,
+        Marcada
     }
 
-    public enum CellContent
+    public enum ItemCelula
     {
-        Empty,
-        Mine
+        Vazio,
+        Mina
     }
 
     public class Cell
     {
-        public CellContent Content { get; set; }
-        public CellState State { get; set; }
+        public ItemCelula Content { get; set; }
+        public EstadoCelula State { get; set; }
 
-        public Cell(CellContent content, CellState state)
+        public Cell(ItemCelula content, EstadoCelula state)
         {
             Content = content;
             State = state;

@@ -13,23 +13,23 @@ namespace CampoMinadoDavi
 {
     public partial class CampoMinadoView : Form
     {
-        private const int BoardSize = 10;
-        private Button[,] buttons;
+        private const int TamanhoJogo = 10;
+        private Button[,] botoes;
 
         public CampoMinadoView()
         {
-            InitializeComponents();
+            CriaJogo();
             this.Size = new Size(320, 340);
         }
 
-        private void InitializeComponents()
+        private void CriaJogo()
         {
-            buttons = new Button[BoardSize, BoardSize];
-            Size = new Size(BoardSize * 30, BoardSize * 30);
+            botoes = new Button[TamanhoJogo, TamanhoJogo];
+            Size = new Size(TamanhoJogo * 30, TamanhoJogo * 30);
 
-            for (int i = 0; i < BoardSize; i++)
+            for (int i = 0; i < TamanhoJogo; i++)
             {
-                for (int j = 0; j < BoardSize; j++)
+                for (int j = 0; j < TamanhoJogo; j++)
                 {
                     Button button = new Button
                     {
@@ -40,7 +40,7 @@ namespace CampoMinadoDavi
 
                     button.MouseDown += Button_MouseDown;
                     Controls.Add(button);
-                    buttons[i, j] = button;
+                    botoes[i, j] = button;
                 }
             }
         }
@@ -54,26 +54,26 @@ namespace CampoMinadoDavi
 
             if (e.Button == MouseButtons.Left)
             {
-                OnButtonClicked(x, y, MouseButtons.Left);
+                BotaoClicado(x, y, MouseButtons.Left);
             }
             else if (e.Button == MouseButtons.Right)
             {
-                OnButtonClicked(x, y, MouseButtons.Right);
+                BotaoClicado(x, y, MouseButtons.Right);
             }
         }
 
-        public event Action<int, int, MouseButtons> ButtonClicked;
+        public event Action<int, int, MouseButtons> CliqueBotao;
 
-        private void OnButtonClicked(int x, int y, MouseButtons button)
+        private void BotaoClicado(int x, int y, MouseButtons botao)
         {
-            ButtonClicked?.Invoke(x, y, button);
+            CliqueBotao?.Invoke(x, y, botao);
         }
 
-        public void UpdateButton(int x, int y, string text, Color textColor, Color backColor)
+        public void AtualizaBotao(int x, int y, string texto, Color corTexto, Color corFundo)
         {
-            buttons[x, y].Text = text;
-            buttons[x, y].ForeColor = textColor;
-            buttons[x, y].BackColor = backColor;
+            botoes[x, y].Text = texto;
+            botoes[x, y].ForeColor = corTexto;
+            botoes[x, y].BackColor = corFundo;
         }
     }
 }
