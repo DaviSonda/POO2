@@ -1,6 +1,6 @@
 ﻿namespace CampoMinadoDavi
 {
-    partial class Form1
+    partial class CampoMinadoView
     {
         /// <summary>
         /// Variável de designer necessária.
@@ -30,14 +30,13 @@
         {
             this.SuspendLayout();
             // 
-            // Form1
+            // CampoMinadoView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(302, 303);
-            this.Name = "Form1";
+            this.ClientSize = new System.Drawing.Size(835, 513);
+            this.Name = "CampoMinadoView";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_load);
             this.ResumeLayout(false);
 
         }

@@ -1,6 +1,5 @@
 D:\GitHub\POO2\CampoMinadoDavi\obj\Debug\CampoMinadoDavi.csproj.AssemblyReference.cache
 D:\GitHub\POO2\CampoMinadoDavi\obj\Debug\CampoMinadoDavi.csproj.SuggestedBindingRedirects.cache
-D:\GitHub\POO2\CampoMinadoDavi\obj\Debug\CampoMinadoDavi.Form1.resources
 D:\GitHub\POO2\CampoMinadoDavi\obj\Debug\CampoMinadoDavi.Properties.Resources.resources
 D:\GitHub\POO2\CampoMinadoDavi\obj\Debug\CampoMinadoDavi.csproj.GenerateResource.cache
 D:\GitHub\POO2\CampoMinadoDavi\obj\Debug\CampoMinadoDavi.csproj.CoreCompileInputs.cache
@@ -9,3 +8,4 @@ D:\GitHub\POO2\CampoMinadoDavi\bin\Debug\CampoMinadoDavi.exe
 D:\GitHub\POO2\CampoMinadoDavi\bin\Debug\CampoMinadoDavi.pdb
 D:\GitHub\POO2\CampoMinadoDavi\obj\Debug\CampoMinadoDavi.exe
 D:\GitHub\POO2\CampoMinadoDavi\obj\Debug\CampoMinadoDavi.pdb
+D:\GitHub\POO2\CampoMinadoDavi\obj\Debug\CampoMinadoDavi.CampoMinadoView.resources
