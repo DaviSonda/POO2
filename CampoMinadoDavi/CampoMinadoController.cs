@@ -11,7 +11,7 @@ namespace CampoMinadoDavi
     public class CampoMinadoController
     {
         private const int TamanhoJogo = 10;
-        private const int QuantidadeMinas = 15;
+        private const int QuantidadeMinas = 20;
 
         private Cell[,] jogo;
         private CampoMinadoView view;

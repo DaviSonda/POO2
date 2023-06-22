@@ -9,3 +9,14 @@ D:\GitHub\POO2\CampoMinadoDavi\bin\Debug\CampoMinadoDavi.pdb
 D:\GitHub\POO2\CampoMinadoDavi\obj\Debug\CampoMinadoDavi.exe
 D:\GitHub\POO2\CampoMinadoDavi\obj\Debug\CampoMinadoDavi.pdb
 D:\GitHub\POO2\CampoMinadoDavi\obj\Debug\CampoMinadoDavi.CampoMinadoView.resources
+D:\Documents\GitHub\POO2\CampoMinadoDavi\bin\Debug\CampoMinadoDavi.exe.config
+D:\Documents\GitHub\POO2\CampoMinadoDavi\bin\Debug\CampoMinadoDavi.exe
+D:\Documents\GitHub\POO2\CampoMinadoDavi\bin\Debug\CampoMinadoDavi.pdb
+D:\Documents\GitHub\POO2\CampoMinadoDavi\obj\Debug\CampoMinadoDavi.csproj.AssemblyReference.cache
+D:\Documents\GitHub\POO2\CampoMinadoDavi\obj\Debug\CampoMinadoDavi.csproj.SuggestedBindingRedirects.cache
+D:\Documents\GitHub\POO2\CampoMinadoDavi\obj\Debug\CampoMinadoDavi.CampoMinadoView.resources
+D:\Documents\GitHub\POO2\CampoMinadoDavi\obj\Debug\CampoMinadoDavi.Properties.Resources.resources
+D:\Documents\GitHub\POO2\CampoMinadoDavi\obj\Debug\CampoMinadoDavi.csproj.GenerateResource.cache
+D:\Documents\GitHub\POO2\CampoMinadoDavi\obj\Debug\CampoMinadoDavi.csproj.CoreCompileInputs.cache
+D:\Documents\GitHub\POO2\CampoMinadoDavi\obj\Debug\CampoMinadoDavi.exe
+D:\Documents\GitHub\POO2\CampoMinadoDavi\obj\Debug\CampoMinadoDavi.pdb
