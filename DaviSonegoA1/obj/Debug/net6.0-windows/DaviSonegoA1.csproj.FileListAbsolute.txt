@@ -1,0 +1,17 @@
+D:\Documents\GitHub\POO2\DaviSonegoA1\bin\Debug\net6.0-windows\DaviSonegoA1.exe
+D:\Documents\GitHub\POO2\DaviSonegoA1\bin\Debug\net6.0-windows\DaviSonegoA1.deps.json
+D:\Documents\GitHub\POO2\DaviSonegoA1\bin\Debug\net6.0-windows\DaviSonegoA1.runtimeconfig.json
+D:\Documents\GitHub\POO2\DaviSonegoA1\bin\Debug\net6.0-windows\DaviSonegoA1.dll
+D:\Documents\GitHub\POO2\DaviSonegoA1\bin\Debug\net6.0-windows\DaviSonegoA1.pdb
+D:\Documents\GitHub\POO2\DaviSonegoA1\obj\Debug\net6.0-windows\DaviSonegoA1.csproj.AssemblyReference.cache
+D:\Documents\GitHub\POO2\DaviSonegoA1\obj\Debug\net6.0-windows\DaviSonegoA1.FracaoView.resources
+D:\Documents\GitHub\POO2\DaviSonegoA1\obj\Debug\net6.0-windows\DaviSonegoA1.csproj.GenerateResource.cache
+D:\Documents\GitHub\POO2\DaviSonegoA1\obj\Debug\net6.0-windows\DaviSonegoA1.GeneratedMSBuildEditorConfig.editorconfig
+D:\Documents\GitHub\POO2\DaviSonegoA1\obj\Debug\net6.0-windows\DaviSonegoA1.AssemblyInfoInputs.cache
+D:\Documents\GitHub\POO2\DaviSonegoA1\obj\Debug\net6.0-windows\DaviSonegoA1.AssemblyInfo.cs
+D:\Documents\GitHub\POO2\DaviSonegoA1\obj\Debug\net6.0-windows\DaviSonegoA1.csproj.CoreCompileInputs.cache
+D:\Documents\GitHub\POO2\DaviSonegoA1\obj\Debug\net6.0-windows\DaviSonegoA1.dll
+D:\Documents\GitHub\POO2\DaviSonegoA1\obj\Debug\net6.0-windows\refint\DaviSonegoA1.dll
+D:\Documents\GitHub\POO2\DaviSonegoA1\obj\Debug\net6.0-windows\DaviSonegoA1.pdb
+D:\Documents\GitHub\POO2\DaviSonegoA1\obj\Debug\net6.0-windows\DaviSonegoA1.genruntimeconfig.cache
+D:\Documents\GitHub\POO2\DaviSonegoA1\obj\Debug\net6.0-windows\ref\DaviSonegoA1.dll
